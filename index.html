@@ -38,7 +38,6 @@
       background-size: 32px 32px;
       font-family: Inter, Arial, sans-serif;
       line-height: 1.7;
-      overflow-x: hidden;
     }
 
     .container {
@@ -54,7 +53,6 @@
       width: 0%;
       height: 3px;
       background: var(--accent-light);
-      transition: width .1s linear;
     }
 
     header {
@@ -114,7 +112,6 @@
       color: var(--muted);
       font: 600 11px Inter, sans-serif;
       cursor: pointer;
-      transition: .2s;
     }
 
     .print-button:hover {
@@ -123,13 +120,11 @@
     }
 
     .hero {
-      position: relative;
       min-height: 490px;
       display: flex;
       align-items: center;
       margin-top: 35px;
       padding: 90px 60px;
-      overflow: hidden;
       border: 1px solid var(--line);
       background-image:
         linear-gradient(90deg, rgba(10,12,14,.95) 0%, rgba(10,12,14,.82) 48%, rgba(10,12,14,.55) 100%),
@@ -140,8 +135,6 @@
     }
 
     .hero-content {
-      position: relative;
-      z-index: 1;
       max-width: 780px;
     }
 
@@ -235,10 +228,6 @@
       text-transform: uppercase;
     }
 
-    .data-item strong {
-      font-size: 15px;
-    }
-
     .two-columns {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -277,7 +266,7 @@
 
     .schedule {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
 
@@ -325,23 +314,23 @@
     }
 
     .character-image img {
-      position: absolute;
-      inset: 0;
       width: 100%;
       height: 100%;
+      position: absolute;
+      inset: 0;
       object-fit: cover;
       object-position: center;
       filter: saturate(.92) contrast(1.05);
     }
 
     .character-image::after {
-      content: "AKITO";
+      content: "AKITO SHIBATA";
       position: absolute;
       bottom: 18px;
       left: 18px;
       color: rgba(255,255,255,.82);
-      font: 600 26px Cinzel, serif;
-      letter-spacing: 5px;
+      font: 600 22px Cinzel, serif;
+      letter-spacing: 3px;
       text-shadow: 0 2px 10px #000;
     }
 
@@ -610,20 +599,13 @@
         </div>
 
         <div class="schedule">
-          <article class="schedule-card">
-            <h3>Montag & Mittwoch</h3>
-            <p>17:40 Uhr bis 22:30 Uhr</p>
-          </article>
-
-          <article class="schedule-card">
-            <h3>Dienstag bis Freitag</h3>
-            <p>19:30 Uhr bis 23:00 Uhr</p>
-          </article>
-
-          <article class="schedule-card">
-            <h3>Wochenende</h3>
-            <p>In der Regel von 10:00 Uhr bis 22:00 Uhr</p>
-          </article>
+          <article class="schedule-card"><h3>Montag</h3><p>17:40–22:30 Uhr</p></article>
+          <article class="schedule-card"><h3>Dienstag</h3><p>19:30–23:00 Uhr</p></article>
+          <article class="schedule-card"><h3>Mittwoch</h3><p>17:40–22:30 Uhr</p></article>
+          <article class="schedule-card"><h3>Donnerstag</h3><p>19:30–23:00 Uhr</p></article>
+          <article class="schedule-card"><h3>Freitag</h3><p>19:30–23:00 Uhr</p></article>
+          <article class="schedule-card"><h3>Samstag</h3><p>10:00–22:00 Uhr</p></article>
+          <article class="schedule-card"><h3>Sonntag</h3><p>10:00–22:00 Uhr</p></article>
         </div>
       </div>
     </section>
@@ -637,21 +619,30 @@
 
         <article class="content-card">
           <p>
-            Ihr solltet mich whitelisten, weil ich motiviert bin, langfristig und
-            ernsthaft RP auf Zenkai DE zu spielen. Ich gehe respektvoll mit anderen
-            Spielern um, halte mich an Regeln und möchte einen glaubwürdigen Charakter
-            mit eigener Geschichte entwickeln.
+            Ich möchte auf Zenkai DE spielen, weil mich ein langfristiges Naruto-RP mit
+            klaren Regeln, einer aktiven Serverwelt und einer glaubwürdigen Entwicklung
+            des eigenen Charakters anspricht. Besonders wichtig ist mir, dass Roleplay
+            nicht nur aus Kämpfen besteht, sondern auch Beziehungen, Konflikte, gemeinsame
+            Geschichten und das Dorfleben eine wichtige Rolle spielen.
           </p>
 
           <p>
-            Mir ist es wichtig, nicht nur für mich selbst RP zu machen, sondern auch
-            Situationen zu schaffen, an denen andere Spieler Spaß haben. Außerdem bin
-            ich offen für Kritik und bereit, mich weiterzuentwickeln.
+            Durch meine bisherige RP-Erfahrung weiß ich, wie wichtig es ist, anderen
+            Spielern Raum für ihre eigenen Situationen zu geben und nicht nur die
+            Entwicklung des eigenen Charakters in den Vordergrund zu stellen. Ich möchte
+            Akito langsam und nachvollziehbar entwickeln, auf Kritik eingehen und mich
+            an die Lore sowie die Regeln des Servers halten.
+          </p>
+
+          <p>
+            Zenkai DE interessiert mich besonders, weil ich hier die Möglichkeit sehe,
+            langfristig Teil einer Community zu werden und gemeinsam mit anderen Spielern
+            Geschichten aufzubauen, die über einzelne Szenen hinausgehen.
           </p>
 
           <div class="quote-box">
-            Mein Ziel ist es, ein verlässlicher Teil der Community zu sein und gemeinsam
-            mit anderen Spielern langfristige sowie spannende RP-Situationen zu schaffen.
+            Mein Ziel ist es, ein verlässlicher Teil der Community zu sein und Situationen
+            mitzugestalten, die auch anderen Spielern langfristig Spaß machen.
           </div>
         </article>
       </div>
@@ -689,10 +680,9 @@
           <p>
             Insgesamt habe ich rund 3.500 Stunden in GMod und etwa 500 Stunden in Gothic
             gesammelt. Durch diese intensive RP-Erfahrung konnte ich ein gutes Verständnis
-            für verschiedene RP-Stile, Situationen und Rollen entwickeln. Daher würde ich
-            meine RP-Erfahrung als sehr umfangreich einschätzen und denke, dass ich mich
-            gut in das RP auf eurem Server einfinden und mit dem vorhandenen RP-Niveau
-            mithalten kann.
+            für verschiedene RP-Stile, Situationen und Rollen entwickeln. Daher denke ich,
+            dass ich mich gut in das RP auf eurem Server einfinden und mit dem vorhandenen
+            RP-Niveau mithalten kann.
           </p>
         </article>
       </div>
@@ -704,40 +694,38 @@
           <p class="eyebrow">ABSCHNITT V</p>
           <h2>Mein RP-Charakter</h2>
           <p class="section-intro">
-            Die Charakterakte meines Akademieanwärters Akito.
+            Die Charakterakte meines Akademieanwärters Akito Shibata.
           </p>
         </div>
 
         <article class="character-hero">
           <div class="character-image">
-            <img src="assets/akito.png" alt="Akito, junger Shinobi-Akademieanwärter">
+            <img src="assets/akito.png" alt="Akito Shibata, junger Shinobi-Akademieanwärter">
           </div>
 
           <div class="character-details">
             <div class="character-title">
               <div>
                 <p class="eyebrow">CHARAKTERAKTE</p>
-                <h2>Akito</h2>
+                <h2>Akito Shibata</h2>
               </div>
-
               <span>AKADEMIEANWÄRTER</span>
             </div>
 
             <p class="character-description">
-              Akito ist ein junger und motivierter Akademieanwärter aus Sunagakure, der
-              sich durch Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz
-              seines jungen Alters möchte er sich Schritt für Schritt weiterentwickeln
-              und eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
+              Akito Shibata ist ein neugieriger und motivierter Junge aus Sunagakure.
+              Er besitzt noch keine Shinobi-Ausbildung, möchte aber nach seinem Eintritt
+              in die Akademie langsam herausfinden, welchen Weg er später gehen möchte.
             </p>
 
             <div class="sheet-grid">
-              <div class="sheet-item"><small>Name</small><strong>Akito</strong></div>
+              <div class="sheet-item"><small>Name</small><strong>Akito Shibata</strong></div>
               <div class="sheet-item"><small>Alter</small><strong>8 Jahre</strong></div>
               <div class="sheet-item"><small>Herkunft</small><strong>Sunagakure</strong></div>
               <div class="sheet-item"><small>Rang</small><strong>Akademieanwärter</strong></div>
-              <div class="sheet-item"><small>Familie</small><strong>Gyomei & Kira</strong></div>
-              <div class="sheet-item"><small>Element</small><strong>Unbekannt</strong></div>
-              <div class="sheet-item"><small>Kampfstil</small><strong>Taijutsu</strong></div>
+              <div class="sheet-item"><small>Familie</small><strong>Gyomei & Kira Shibata</strong></div>
+              <div class="sheet-item"><small>Chakra-Natur</small><strong>Unbekannt</strong></div>
+              <div class="sheet-item"><small>Interesse</small><strong>Taijutsu</strong></div>
             </div>
           </div>
         </article>
@@ -746,11 +734,11 @@
           <article class="list-card strength">
             <h3>Eigenschaften</h3>
             <ul>
-              <li>Diszipliniert</li>
-              <li>Loyal</li>
-              <li>Humorvoll</li>
-              <li>Denkt bei Kritik über sein Verhalten nach</li>
-              <li>Direkt und teilweise stur</li>
+              <li>Diszipliniert und aufmerksam</li>
+              <li>Loyal gegenüber Menschen, die ihm wichtig sind</li>
+              <li>Humorvoll und lebensfroh</li>
+              <li>Denkt nach Kritik über sein Verhalten nach</li>
+              <li>Direkt und manchmal stur</li>
             </ul>
           </article>
 
@@ -759,9 +747,9 @@
             <ul>
               <li>Kurze, schwarze Haare</li>
               <li>Grüne Augen und kindliches Aussehen</li>
-              <li>Normale Shinobi-Kleidung</li>
-              <li>Stirnband an der Stirn</li>
-              <li>Kunai am Bein und Shuriken in der Gürteltasche</li>
+              <li>Schlichte, praktische Kleidung</li>
+              <li>Trägt eine kleine Gürteltasche</li>
+              <li>Besitzt noch keine offizielle Shinobi-Ausrüstung</li>
             </ul>
           </article>
         </div>
@@ -770,37 +758,61 @@
           <article class="list-card strength">
             <h3>Wissen & Kenntnisse</h3>
             <ul>
-              <li>Grundwissen über die Clans von Sunagakure</li>
-              <li>Grundlegendes Wissen über Ninja-Werkzeuge</li>
-              <li>Kennt Kunai, Shuriken und Senbon in der Theorie</li>
-              <li>Grundkenntnisse über Papierbomben beziehungsweise Sprengsiegel</li>
-              <li>Grundwissen über die Chakra-Punkte im menschlichen Körper</li>
+              <li>Grundwissen über die Clans und das Dorfleben von Sunagakure</li>
+              <li>Kennt Kunai, Shuriken und Senbon aus Erzählungen und Beobachtungen</li>
+              <li>Hat keine praktische Erfahrung im Umgang mit Ninja-Werkzeugen</li>
+              <li>Weiß, dass Chakra für viele Shinobi-Techniken wichtig ist</li>
+              <li>Hat nur einfaches, altersgerechtes Wissen über die natürlichen Elemente</li>
             </ul>
           </article>
 
           <article class="list-card weakness">
-            <h3>Theoretisches Ninja-Wissen</h3>
+            <h3>Aktueller Stand</h3>
             <ul>
-              <li>Grundwissen über die natürlichen Chakra-Elemente</li>
-              <li>Weiß, dass seine eigene Chakra-Natur noch unbekannt ist</li>
-              <li>Grundlegendes Wissen über Kekkei Genkai</li>
-              <li>Kennt das Sand-Kekkei-Genkai aus Geschichten, Unterricht oder Büchern</li>
-              <li>Besitzt selbst kein Sand-Kekkei-Genkai und kann es nicht anwenden</li>
+              <li>Keine Chakra-Natur bekannt</li>
+              <li>Keine Jutsu oder besonderen Techniken</li>
+              <li>Keine Ausbildung in Ninjutsu, Genjutsu oder Fūinjutsu</li>
+              <li>Keine Kenntnisse über Staatsgeheimnisse oder verbotene Techniken</li>
+              <li>Interessiert sich für Taijutsu, hat aber nur Bewegungen beobachtet</li>
             </ul>
           </article>
         </div>
 
         <article class="content-card" style="margin-top: 20px;">
-          <p class="eyebrow">LANGFRISTIGE ENTWICKLUNG</p>
+          <p class="eyebrow">KURZ-, MITTEL- & LANGFRISTIGE ZIELE</p>
           <h3 style="margin-top: 0;">Akitos Ziele</h3>
 
           <ul>
-            <li>Eine eigene Kampftechnik zu entwickeln, die zu seinem Kampfstil und seiner Persönlichkeit passt.</li>
-            <li>Seinen eigenen Weg als Shinobi zu finden und nicht nur Erwartungen anderer zu erfüllen.</li>
-            <li>Eine Person zu finden, zu der er langfristig aufschauen und von der er lernen kann.</li>
-            <li>Seine Sturheit und Direktheit so einzusetzen, dass sie zu einer Stärke für ihn und seine Freunde wird.</li>
-            <li>Eine echte Freundschaft aufzubauen, die ihn auch außerhalb des Trainings weiterbringt.</li>
-            <li>Eine persönliche Regel zu entwickeln, an die er sich als Shinobi halten möchte: Niemanden zu töten, soweit es ihm möglich ist.</li>
+            <li>
+              <strong>Kurzfristig:</strong> Nach seinem Eintritt in die Akademie möchte
+              Akito lernen, wie er mit anderen Kindern zusammenarbeitet, auch wenn diese
+              andere Meinungen als er haben.
+            </li>
+
+            <li>
+              <strong>Mittelfristig:</strong> Er möchte mit Mitschülern echte
+              Freundschaften aufbauen und lernen, ein verlässlicher Kamerad zu sein.
+              Dabei möchte er nicht nur Hilfe annehmen, sondern selbst für andere da sein.
+            </li>
+
+            <li>
+              <strong>Mittelfristig:</strong> Akito möchte herausfinden, ob Taijutsu
+              wirklich der Weg ist, der zu ihm passt. Im Laufe seiner Ausbildung möchte
+              er einen Stil entwickeln, der auf Bewegung, Ausdauer und Disziplin basiert.
+            </li>
+
+            <li>
+              <strong>Langfristig:</strong> Er möchte seine Direktheit und Sturheit besser
+              kontrollieren lernen, damit diese Eigenschaften nicht zu Problemen führen,
+              sondern ihm helfen, in schwierigen Situationen zu seinen Überzeugungen zu stehen.
+            </li>
+
+            <li>
+              <strong>Langfristig:</strong> Akito möchte sich eine persönliche Regel
+              bewahren: Wenn es möglich ist, sucht er nach einer Lösung, durch die
+              niemand getötet werden muss. Er weiß, dass diese Haltung schwierig sein
+              kann, möchte aber herausfinden, ob er ihr trotzdem treu bleiben kann.
+            </li>
           </ul>
         </article>
       </div>
@@ -810,131 +822,98 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT VI</p>
-          <h2>Hintergrundgeschichte – Akito</h2>
+          <h2>Hintergrundgeschichte – Akito Shibata</h2>
         </div>
 
         <article class="content-card story">
           <p>
-            Akito wurde in Sunagakure geboren und wuchs dort gemeinsam mit seiner Familie,
-            Gyomei und Kira, auf. Schon als kleines Kind war er ein eher neugieriger und
-            aufgeweckter Junge. Er stellte viele Fragen und wollte meistens genau wissen,
-            warum etwas auf eine bestimmte Art gemacht wurde. Dabei konnte er manchmal
-            ziemlich hartnäckig sein, wenn ihm eine Antwort nicht genügte.
+            Akito Shibata wurde in Sunagakure geboren und wuchs dort gemeinsam mit seinen
+            Eltern Gyomei und Kira Shibata auf. Schon als kleines Kind war er ein neugieriger
+            und aufgeweckter Junge. Er stellte viele Fragen und wollte meistens verstehen,
+            warum etwas auf eine bestimmte Art gemacht wurde. Wenn ihm eine Antwort nicht
+            genügte, konnte er dabei durchaus hartnäckig sein.
           </p>
 
           <p>
-            Durch seine Familie bekam Akito schon früh einen ersten Einblick in das Leben
-            eines Shinobi. Er wusste, dass Shinobi nicht einfach nur kämpfen, sondern auch
-            Verantwortung für ihr Dorf und ihre Mitmenschen übernehmen. Besonders interessant
-            fand er die verschiedenen Ausrüstungsgegenstände und die grundlegenden Dinge,
-            die man über Chakra und Ninjutsu wissen konnte.
+            Durch seine Familie bekam Akito früh einen ersten Einblick in das Leben innerhalb
+            eines Shinobi-Dorfes. Er verstand, dass Shinobi nicht nur kämpfen, sondern auch
+            Verantwortung für ihr Dorf und die Menschen darin übernehmen. Besonders spannend
+            fand er die vielen Dinge, die es in Sunagakure zu entdecken gab: die Akademie,
+            die verschiedenen Aufgaben im Dorf und die Geschichten über Shinobi, die er von
+            anderen Bewohnern hörte.
           </p>
 
           <p>
-            Da Akito bisher noch nicht auf der Akademie war, hatte er selbst allerdings noch
-            keine richtige Ausbildung. Sein Wissen stammt hauptsächlich aus Erzählungen,
-            Gesprächen und Dingen, die er sich selbst angelesen oder bei anderen beobachtet
-            hatte. Kunai, Shuriken und Senbon kannte er beispielsweise aus der Theorie, hatte
-            aber noch nicht gelernt, richtig mit ihnen umzugehen. Auch über Papierbomben und
-            Sprengsiegel wusste er nur die grundlegenden Dinge.
+            Da Akito bisher noch nicht auf der Akademie war, besitzt er keine echte Ausbildung.
+            Sein Wissen stammt hauptsächlich aus Gesprächen, Erzählungen und Beobachtungen.
+            Er weiß, dass Kunai, Shuriken und Senbon zu den bekannten Ninja-Werkzeugen gehören,
+            hat aber nie gelernt, sie richtig oder sicher einzusetzen. Auch Chakra kennt er
+            nur als etwas, das für viele Techniken wichtig ist.
           </p>
 
           <p>
-            Besonders interessierte ihn das Thema Chakra. Akito wusste, dass Chakra für viele
-            Techniken benötigt wird und dass es verschiedene natürliche Elemente gibt. Welche
-            Chakra-Natur er selbst besitzt, wusste er bisher noch nicht. Auch von Kekkei Genkai
-            hatte er bereits gehört. Die Geschichten über das Sand-Kekkei-Genkai, das er mit
-            Sunagakure verband, fand er besonders interessant. Dabei war ihm bewusst, dass er
-            selbst kein solches Kekkei Genkai besitzt und deshalb nicht einfach davon ausgehen
-            konnte, irgendwann Sand kontrollieren zu können.
+            Akito weiß außerdem, dass es verschiedene natürliche Chakra-Elemente gibt. Welche
+            Chakra-Natur er selbst besitzt, weiß er jedoch nicht. Er betrachtet diese Themen
+            mit Neugier, ohne zu glauben, bereits viel darüber zu wissen. Für ihn sind sie
+            im Moment eher Dinge, die er später in der Akademie besser verstehen möchte.
           </p>
 
           <p>
-            Im Alltag war Akito meistens ein aktiver und lebensfroher Junge. Er konnte viel
-            lachen und machte gerne Späße, nahm bestimmte Dinge aber auch ziemlich ernst.
-            Besonders wenn es um Dinge ging, die ihm wichtig waren, zeigte sich seine Sturheit.
-            Wenn er eine bestimmte Meinung hatte, ließ er sich nicht immer sofort davon
-            überzeugen, dass jemand anderes vielleicht recht hatte.
+            Im Alltag ist Akito meistens aktiv und lebensfroh. Er lacht gerne, macht manchmal
+            unpassende Witze und versucht, angespannte Situationen aufzulockern. Gleichzeitig
+            kann er Dinge, die ihm wichtig sind, sehr ernst nehmen. Wenn er überzeugt ist,
+            recht zu haben, fällt es ihm schwer, seine Meinung sofort zu ändern.
           </p>
 
           <p>
-            Trotzdem konnte Akito mit Kritik umgehen. Er brauchte manchmal etwas Zeit, um
-            darüber nachzudenken, bevor er seinen Fehler einsah. Wenn ihm beispielsweise erklärt
-            wurde, dass sein Verhalten nicht richtig gewesen war, reagierte er vielleicht zuerst
-            etwas trotzig. Später dachte er jedoch darüber nach und versuchte, es beim nächsten
-            Mal besser zu machen.
+            Trotzdem kann Akito mit Kritik umgehen. Er braucht manchmal etwas Zeit, bevor er
+            erkennt, dass er einen Fehler gemacht hat. Zuerst reagiert er vielleicht trotzig
+            oder direkt, denkt später aber über die Situation nach. Wenn er merkt, dass jemand
+            recht hatte, versucht er es beim nächsten Mal besser zu machen.
           </p>
 
           <p>
-            Auch sein Interesse am Taijutsu entwickelte sich bereits vor seinem Eintritt in die
-            Akademie. Akito hatte keine richtige Ausbildung und konnte dementsprechend noch keine
-            besonderen Techniken. Trotzdem versuchte er gelegentlich, einfache Bewegungen
-            nachzumachen, die er bei Shinobi gesehen hatte. Ihm gefiel die Vorstellung, sich auf
-            den eigenen Körper verlassen zu können und seine Fähigkeiten durch Training selbst
-            aufzubauen.
+            Sein Interesse am Taijutsu entstand, weil ihm die Vorstellung gefiel, sich auf
+            den eigenen Körper, Ausdauer und Bewegung verlassen zu können. Akito besitzt keine
+            Techniken und hat keine richtige Ausbildung. Gelegentlich versuchte er lediglich,
+            einfache Bewegungen nachzumachen, die er bei Shinobi gesehen hatte.
           </p>
 
           <p>
-            Mit der Zeit entstand daraus auch der Wunsch, irgendwann eine eigene Kampftechnik zu
-            entwickeln. Wie diese aussehen sollte, wusste Akito selbst noch nicht. Dafür war er
-            noch zu jung und hatte bisher zu wenig Erfahrung. Er wollte aber später einmal einen
-            Kampfstil besitzen, der wirklich zu ihm passte und nicht einfach nur von jemand
-            anderem übernommen wurde.
+            Mit der Zeit entstand daraus der Wunsch, später einmal herauszufinden, welcher
+            Kampfstil wirklich zu ihm passt. Akito möchte dabei nicht einfach etwas übernehmen,
+            nur weil es andere tun. Er möchte durch Erfahrungen herausfinden, wie er mit seinen
+            Stärken und Schwächen umgehen kann.
           </p>
 
           <p>
-            Auch über seine Zukunft als Shinobi machte sich Akito bereits Gedanken. Er hatte
-            nicht das eine große Ziel, unbedingt die stärkste Person im Dorf zu werden. Vielmehr
-            wollte er erst einmal herausfinden, wo seine eigenen Stärken lagen und welchen Weg er
-            später einschlagen wollte.
+            Auch über seine Zukunft macht Akito sich Gedanken. Er möchte nicht einfach nur
+            stärker werden, sondern herausfinden, welche Art von Shinobi er sein möchte.
+            Freundschaften sind ihm dabei besonders wichtig. Er hofft, Menschen zu finden,
+            mit denen er nicht nur trainieren, sondern auch außerhalb davon Zeit verbringen
+            und sich gegenseitig unterstützen kann.
           </p>
 
           <p>
-            Ein Wunsch war es für ihn, irgendwann eine Person zu finden, zu der er aufschauen
-            konnte. Jemanden, der bereits viel Erfahrung hatte und von dem er nicht nur im Kampf,
-            sondern auch im Umgang mit anderen Menschen etwas lernen konnte. Akito wusste, dass
-            er selbst noch viel zu lernen hatte und hoffte deshalb, irgendwann einen solchen
-            Menschen kennenzulernen.
+            Schon jetzt hat Akito über eine persönliche Regel nachgedacht. Wenn es ihm möglich
+            ist, möchte er nach einer Lösung suchen, durch die niemand getötet werden muss.
+            Er weiß, dass er noch keine Ahnung hat, welche schwierigen Situationen ihn später
+            erwarten könnten. Trotzdem möchte er versuchen, diese Haltung nicht leichtfertig
+            aufzugeben.
           </p>
 
           <p>
-            Auch Freundschaften waren ihm wichtig. Akito wollte später nicht nur Kameraden haben,
-            mit denen er gemeinsam trainierte, sondern echte Freunde, auf die er sich verlassen
-            konnte. Gleichzeitig wollte er selbst jemand sein, der seinen Freunden hilft, wenn sie
-            Probleme haben.
+            Nun steht für Akito der Eintritt in die Akademie bevor. Dort wird er zum ersten
+            Mal wirklich lernen, was es bedeutet, ein Shinobi zu werden. Er weiß, dass er
+            wahrscheinlich nicht alles sofort können wird und noch viele Fehler machen muss.
+            Genau darauf freut er sich aber: neue Dinge kennenlernen, andere Kinder treffen
+            und langsam herausfinden, welche Fähigkeiten tatsächlich in ihm stecken.
           </p>
 
           <p>
-            Eine Sache, über die Akito bereits nachgedacht hatte, war das Thema Töten. Auch wenn
-            er noch keine wirklichen Erfahrungen mit Kämpfen oder Missionen hatte, wollte er sich
-            für seine Zukunft eine persönliche Regel setzen. Wenn es ihm möglich war, wollte er
-            niemanden töten. Er wusste selbst, dass das Leben eines Shinobi nicht immer einfach
-            sein würde und dass es Situationen geben könnte, in denen diese Entscheidung schwierig
-            werden würde. Trotzdem wollte er versuchen, immer nach einer anderen Lösung zu suchen,
-            bevor er einem anderen Menschen das Leben nehmen würde.
-          </p>
-
-          <p>
-            Nun steht für Akito der Eintritt in die Akademie bevor. Dort wird er zum ersten Mal
-            richtig lernen, was es bedeutet, ein Shinobi zu sein. Vieles von dem, was er bisher
-            nur aus Geschichten oder der Theorie kennt, wird er dort praktisch kennenlernen.
-          </p>
-
-          <p>
-            Er weiß, dass er wahrscheinlich nicht alles sofort können wird und dass er noch sehr
-            viel lernen muss. Genau darauf freut er sich aber auch. Er möchte neue Dinge
-            kennenlernen, andere Kinder treffen und herausfinden, welche Fähigkeiten tatsächlich
-            in ihm stecken.
-          </p>
-
-          <p>
-            Akito ist deshalb noch lange kein fertiger Shinobi. Er ist lediglich ein achtjähriger
-            Junge aus Sunagakure, der neugierig ist, gerne dazulernt und bereits eine ungefähre
-            Vorstellung davon hat, was er später einmal erreichen möchte.
-          </p>
-
-          <p>
-            Seine eigentliche Ausbildung beginnt erst jetzt.
+            Akito Shibata ist noch kein fertiger Shinobi. Er ist ein achtjähriger Junge aus
+            Sunagakure, der neugierig ist, gerne dazulernt und bereit ist, seinen Weg erst
+            noch zu finden. Seine eigentliche Ausbildung beginnt jetzt.
           </p>
         </article>
       </div>
