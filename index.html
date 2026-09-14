@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -67,8 +68,6 @@
       margin: auto;
     }
 
-    /* Kopfbereich */
-
     header {
       position: sticky;
       top: 0;
@@ -118,8 +117,6 @@
       letter-spacing: 1px;
     }
 
-    /* Startbereich */
-
     .hero {
       min-height: 490px;
       display: flex;
@@ -139,9 +136,7 @@
       margin: 0 0 14px;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-family: Cinzel, Georgia, serif;
     }
 
@@ -158,21 +153,23 @@
       line-height: 1.2;
     }
 
-    .hero-text {
-      max-width: 650px;
-      margin: 25px 0 0;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    /* Allgemeine Bereiche */
-
     section {
       padding: 82px 0;
     }
 
     section + section {
       border-top: 1px solid var(--line);
+    }
+
+    .hero-text,
+    .section-intro {
+      color: var(--muted);
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: 25px 0 0;
+      font-size: 17px;
     }
 
     .section-heading {
@@ -182,7 +179,6 @@
 
     .section-intro {
       margin: 0;
-      color: var(--muted);
     }
 
     .content-card {
@@ -199,8 +195,6 @@
       margin-bottom: 0;
     }
 
-    /* OOC-Daten */
-
     .data-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -214,7 +208,8 @@
       background: var(--bg-light);
     }
 
-    .data-item small {
+    .data-item small,
+    .sheet-item small {
       display: block;
       margin-bottom: 4px;
       color: var(--accent-light);
@@ -226,7 +221,6 @@
 
     .data-item strong {
       font-size: 15px;
-      font-weight: 600;
     }
 
     .two-columns {
@@ -247,11 +241,11 @@
       font-size: 21px;
     }
 
-    .list-card.strength h3 {
+    .strength h3 {
       color: #a8d79a;
     }
 
-    .list-card.weakness h3 {
+    .weakness h3 {
       color: var(--gold);
     }
 
@@ -264,8 +258,6 @@
     li {
       margin: 8px 0;
     }
-
-    /* Onlinezeiten */
 
     .schedule {
       display: grid;
@@ -291,8 +283,6 @@
       font-size: 14px;
     }
 
-    /* Whitelist */
-
     .quote-box {
       margin-top: 25px;
       padding: 20px 24px;
@@ -302,14 +292,49 @@
       font-size: 15px;
     }
 
-    /* Charakter */
+    /* Akito-Charakterakte inklusive Bild */
 
     .character-hero {
-      padding: clamp(25px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: minmax(260px, 380px) 1fr;
+      overflow: hidden;
       border: 1px solid rgba(214, 174, 97, 0.3);
       background:
         linear-gradient(120deg, rgba(96, 68, 33, 0.25), rgba(13, 17, 21, 0.95)),
         var(--card);
+    }
+
+    .character-image {
+      position: relative;
+      min-height: 590px;
+      overflow: hidden;
+      border-right: 1px solid rgba(214, 174, 97, 0.25);
+      background: #0b0d10;
+    }
+
+    .character-image::after {
+      content: "AKITO";
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      font: 600 26px Cinzel, serif;
+      letter-spacing: 5px;
+      text-shadow: 0 2px 10px #000;
+    }
+
+    .character-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.92) contrast(1.05);
+    }
+
+    .character-details {
+      padding: clamp(25px, 5vw, 52px);
     }
 
     .character-title {
@@ -331,14 +356,13 @@
     }
 
     .character-description {
-      max-width: 780px;
       margin: 0;
       color: #c3c8c6;
     }
 
     .sheet-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       margin-top: 20px;
       border: 1px solid var(--line);
       background: var(--line);
@@ -352,12 +376,7 @@
     }
 
     .sheet-item small {
-      display: block;
       color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 1.4px;
-      font-weight: 700;
-      text-transform: uppercase;
     }
 
     .sheet-item strong {
@@ -374,11 +393,9 @@
       color: #c7ccca;
     }
 
-    /* Schlusswort */
-
     .closing {
-      text-align: center;
       padding: 90px 20px;
+      text-align: center;
       background:
         linear-gradient(rgba(9, 11, 14, 0.6), rgba(9, 11, 14, 0.9)),
         radial-gradient(circle at center, #3a1a1a, transparent 60%);
@@ -415,9 +432,16 @@
 
       .two-columns,
       .schedule,
+      .data-grid,
       .sheet-grid,
-      .data-grid {
+      .character-hero {
         grid-template-columns: 1fr;
+      }
+
+      .character-image {
+        min-height: 560px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(214, 174, 97, 0.25);
       }
 
       .character-title {
@@ -445,7 +469,6 @@
     <section class="hero container" id="start">
       <div class="hero-content">
         <p class="eyebrow">WHITELIST-BEWERBUNG · ZENKAI DE</p>
-
         <h1>Julian</h1>
 
         <p class="hero-text">
@@ -457,36 +480,19 @@
       </div>
     </section>
 
-    <section id="ooc">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT I</p>
           <h2>OOC-Daten</h2>
-          <p class="section-intro">
-            Ein kurzer Einblick in meine Person außerhalb des Roleplays.
-          </p>
+          <p class="section-intro">Ein kurzer Einblick in meine Person außerhalb des Roleplays.</p>
         </div>
 
         <div class="data-grid">
-          <div class="data-item">
-            <small>Name</small>
-            <strong>Julian</strong>
-          </div>
-
-          <div class="data-item">
-            <small>Alter</small>
-            <strong>18 Jahre</strong>
-          </div>
-
-          <div class="data-item">
-            <small>Herkunft</small>
-            <strong>Odenwald</strong>
-          </div>
-
-          <div class="data-item">
-            <small>Hobbys</small>
-            <strong>Gaming, Basketball, Volleyball & Coden lernen</strong>
-          </div>
+          <div class="data-item"><small>Name</small><strong>Julian</strong></div>
+          <div class="data-item"><small>Alter</small><strong>18 Jahre</strong></div>
+          <div class="data-item"><small>Herkunft</small><strong>Odenwald</strong></div>
+          <div class="data-item"><small>Hobbys</small><strong>Gaming, Basketball, Volleyball & Coden lernen</strong></div>
         </div>
 
         <div class="two-columns">
@@ -513,14 +519,12 @@
       </div>
     </section>
 
-    <section id="onlinezeiten">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT II</p>
           <h2>Onlinezeiten</h2>
-          <p class="section-intro">
-            Meine üblichen Zeiten können sich bei wichtigen Terminen vereinzelt ändern.
-          </p>
+          <p class="section-intro">Meine üblichen Zeiten können sich bei wichtigen Terminen vereinzelt ändern.</p>
         </div>
 
         <div class="schedule">
@@ -542,7 +546,7 @@
       </div>
     </section>
 
-    <section id="whitelist">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT III</p>
@@ -551,10 +555,10 @@
 
         <article class="content-card">
           <p>
-            Ihr solltet mich whitelisten, weil ich motiviert bin, langfristig und
-            ernsthaft RP auf Zenkai DE zu spielen. Ich gehe respektvoll mit anderen
-            Spielern um, halte mich an Regeln und möchte einen glaubwürdigen Charakter
-            mit eigener Geschichte entwickeln.
+            Ihr solltet mich whitelisten, weil ich motiviert bin, langfristig und ernsthaft
+            RP auf Zenkai DE zu spielen. Ich gehe respektvoll mit anderen Spielern um,
+            halte mich an Regeln und möchte einen glaubwürdigen Charakter mit eigener
+            Geschichte entwickeln.
           </p>
 
           <p>
@@ -571,7 +575,7 @@
       </div>
     </section>
 
-    <section id="erfahrung">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT IV</p>
@@ -580,24 +584,24 @@
 
         <article class="content-card">
           <p>
-            Ich habe mit RP im GMod-Bereich angefangen und dabei unter anderem
-            JvS- und Manga-RP gespielt. Über die Jahre konnte ich dabei verschiedene
-            Rollen und Positionen kennenlernen.
+            Ich habe mit RP im GMod-Bereich angefangen und dabei unter anderem JvS- und
+            Manga-RP gespielt. Über die Jahre konnte ich dabei verschiedene Rollen und
+            Positionen kennenlernen.
           </p>
 
           <p>
-            Im JvS-Bereich war ich unter anderem Ratsmitglied der Krieger sowie Darth
-            der Hexer auf dem Server NK. Darüber hinaus habe ich auf verschiedenen
-            Servern wie WOS, TFG, NexusV1, HRP und weiteren Servern gespielt, an deren
-            Namen ich mich mittlerweile nicht mehr vollständig erinnere.
+            Im JvS-Bereich war ich unter anderem Ratsmitglied der Krieger sowie Darth der
+            Hexer auf dem Server NK. Darüber hinaus habe ich auf verschiedenen Servern wie
+            WOS, TFG, NexusV1, HRP und weiteren Servern gespielt, an deren Namen ich mich
+            mittlerweile nicht mehr vollständig erinnere.
           </p>
 
           <p>
-            Im Bereich Manga-RP habe ich hauptsächlich auf Yugen gespielt. Dort war ich
-            bis zum Serverende als Elite-Jonin aktiv. Zu guter Letzt habe ich auch
-            Gothic-RP betrieben. Dabei handelt es sich um ein älteres Spiel im
-            Mittelalter-Setting, in dem hauptsächlich Schreib-RP betrieben wurde.
-            Dort war ich als Bandit 1. Klasse tätig.
+            Im Bereich Manga-RP habe ich hauptsächlich auf Yugen gespielt. Dort war ich bis
+            zum Serverende als Elite-Jonin aktiv. Zu guter Letzt habe ich auch Gothic-RP
+            betrieben. Dabei handelt es sich um ein älteres Spiel im Mittelalter-Setting,
+            in dem hauptsächlich Schreib-RP betrieben wurde. Dort war ich als Bandit
+            1. Klasse tätig.
           </p>
 
           <p>
@@ -612,62 +616,42 @@
       </div>
     </section>
 
-    <section id="charakter">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT V</p>
           <h2>Mein RP-Charakter</h2>
-          <p class="section-intro">
-            Die Charakterakte meines Akademieschülers Akito.
-          </p>
+          <p class="section-intro">Die Charakterakte meines Akademieschülers Akito.</p>
         </div>
 
         <article class="character-hero">
-          <div class="character-title">
-            <div>
-              <p class="eyebrow">CHARAKTERAKTE</p>
-              <h2>Akito</h2>
-            </div>
-
-            <span>AKADEMIESCHÜLER</span>
+          <div class="character-image">
+            <img src="assets/akito.png" alt="Akito, junger Shinobi-Akademieschüler">
           </div>
 
-          <p class="character-description">
-            Akito ist ein junger und motivierter Akademieschüler, der sich durch
-            Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz seines
-            jungen Alters möchte er sich Schritt für Schritt weiterentwickeln und
-            eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
-          </p>
-
-          <div class="sheet-grid">
-            <div class="sheet-item">
-              <small>Name</small>
-              <strong>Akito</strong>
+          <div class="character-details">
+            <div class="character-title">
+              <div>
+                <p class="eyebrow">CHARAKTERAKTE</p>
+                <h2>Akito</h2>
+              </div>
+              <span>AKADEMIESCHÜLER</span>
             </div>
 
-            <div class="sheet-item">
-              <small>Alter</small>
-              <strong>8 Jahre</strong>
-            </div>
+            <p class="character-description">
+              Akito ist ein junger und motivierter Akademieschüler, der sich durch
+              Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz seines
+              jungen Alters möchte er sich Schritt für Schritt weiterentwickeln und
+              eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
+            </p>
 
-            <div class="sheet-item">
-              <small>Rang</small>
-              <strong>Akademieschüler</strong>
-            </div>
-
-            <div class="sheet-item">
-              <small>Familie</small>
-              <strong>Gyomei & Kira</strong>
-            </div>
-
-            <div class="sheet-item">
-              <small>Element</small>
-              <strong>Unbekannt</strong>
-            </div>
-
-            <div class="sheet-item">
-              <small>Kampfstil</small>
-              <strong>Taijutsu</strong>
+            <div class="sheet-grid">
+              <div class="sheet-item"><small>Name</small><strong>Akito</strong></div>
+              <div class="sheet-item"><small>Alter</small><strong>8 Jahre</strong></div>
+              <div class="sheet-item"><small>Rang</small><strong>Akademieschüler</strong></div>
+              <div class="sheet-item"><small>Familie</small><strong>Gyomei & Kira</strong></div>
+              <div class="sheet-item"><small>Element</small><strong>Unbekannt</strong></div>
+              <div class="sheet-item"><small>Kampfstil</small><strong>Taijutsu</strong></div>
             </div>
           </div>
         </article>
@@ -698,7 +682,7 @@
       </div>
     </section>
 
-    <section id="geschichte">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT VI</p>
@@ -708,48 +692,35 @@
         <article class="content-card story">
           <p>
             Akito ist ein achtjähriger Akademieschüler aus <strong>[Dorf eintragen]</strong>.
-            Er lebt gemeinsam mit seinen Eltern Gyomei und Kira in einem einfachen,
-            aber liebevollen Zuhause. Sein Vater Gyomei hat ihm früh beigebracht, dass
-            ein Shinobi nicht nur an seiner Stärke gemessen wird, sondern vor allem
-            daran, ob er zu seinem Wort steht und seine Kameraden beschützt. Seine Mutter
-            Kira sorgt dafür, dass Akito trotz seines großen Traums weiterhin Kind sein
-            darf und nicht vergisst, auch Spaß zu haben.
+            Er lebt gemeinsam mit seinen Eltern Gyomei und Kira in einem einfachen, aber
+            liebevollen Zuhause. Sein Vater Gyomei hat ihm früh beigebracht, dass ein
+            Shinobi nicht nur an seiner Stärke gemessen wird, sondern vor allem daran, ob
+            er zu seinem Wort steht und seine Kameraden beschützt. Seine Mutter Kira sorgt
+            dafür, dass Akito trotz seines großen Traums weiterhin Kind sein darf und nicht
+            vergisst, auch Spaß zu haben.
           </p>
 
           <p>
-            Schon seit seiner frühen Kindheit interessiert sich Akito für Shinobi und
-            deren Geschichten. Besonders die Erzählungen über legendäre Ninja, die ihr
-            Dorf beschützten und trotz schwieriger Situationen niemals aufgegeben haben,
+            Schon seit seiner frühen Kindheit interessiert sich Akito für Shinobi und deren
+            Geschichten. Besonders die Erzählungen über legendäre Ninja, die ihr Dorf
+            beschützten und trotz schwieriger Situationen niemals aufgegeben haben,
             begeistern ihn. Sein größter Traum ist es deshalb, eines Tages selbst ein
-            legendärer Sannin zu werden. Akito weiß jedoch, dass er noch einen sehr
-            langen Weg vor sich hat und dieser Traum nur durch Training, Erfahrung und
-            Zusammenarbeit erreicht werden kann.
+            legendärer Sannin zu werden.
           </p>
 
           <p>
             In der Akademie gilt Akito als diszipliniert und aufmerksam. Wenn er sich ein
             Ziel setzt, übt er so lange, bis er zumindest eine Verbesserung bemerkt.
-            Dabei kann er jedoch auch sehr direkt und stur sein. Wenn er überzeugt ist,
-            im Recht zu sein, fällt es ihm schwer, seine Meinung sofort zu ändern. Nach
-            Kritik denkt er aber meist lange über seine Fehler nach und versucht, es beim
-            nächsten Mal besser zu machen.
-          </p>
-
-          <p>
-            Akito kommt gut mit anderen Kindern zurecht, auch wenn sein Humor manchmal
-            etwas unpassend sein kann. Er versucht mit kleinen Witzen und lockeren
-            Sprüchen, angespannte Situationen aufzulockern. Gegenüber Menschen, die ihm
-            wichtig sind, ist er sehr loyal. Er würde seine Freunde nicht einfach allein
-            lassen, selbst wenn er dabei Angst hat oder sich unsicher fühlt.
+            Dabei kann er jedoch auch sehr direkt und stur sein. Nach Kritik denkt er aber
+            meist lange über seine Fehler nach und versucht, es beim nächsten Mal besser
+            zu machen.
           </p>
 
           <p>
             Sein bevorzugter Kampfstil ist Taijutsu. Akito trainiert vor allem seine
             Beweglichkeit, seine Reaktion und den Umgang mit einfachen Nahkampftechniken.
-            Er trägt zwar bereits Kunai und Shuriken bei sich, besitzt darin aber noch
-            wenig Erfahrung und muss lernen, verantwortungsvoll damit umzugehen. Seine
-            Chakra-Natur ist bisher unbekannt, weshalb er sich aktuell auf die Grundlagen
-            konzentriert, anstatt nach besonderen Fähigkeiten zu suchen.
+            Seine Chakra-Natur ist bisher unbekannt, weshalb er sich aktuell auf die
+            Grundlagen konzentriert.
           </p>
 
           <p>
@@ -763,7 +734,7 @@
       </div>
     </section>
 
-    <section id="schluss">
+    <section>
       <div class="container">
         <article class="closing">
           <p class="eyebrow">SCHLUSSWORT</p>
@@ -771,9 +742,8 @@
 
           <p>
             Ich hoffe, meine Bewerbung konnte euch überzeugen und dass ich die Chance
-            bekomme, auf eurem Server zu spielen. Ich würde mich freuen, Teil von
-            Zenkai DE zu werden und gemeinsam mit der Community spannendes Roleplay
-            zu erleben.
+            bekomme, auf eurem Server zu spielen. Ich würde mich freuen, Teil von Zenkai
+            DE zu werden und gemeinsam mit der Community spannendes Roleplay zu erleben.
           </p>
 
           <p class="signature">
