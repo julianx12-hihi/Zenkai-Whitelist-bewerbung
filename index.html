@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Whitelist-Bewerbung für Zenkai DE – NanosWorld Naruto RP." />
-  <title>Zenkai DE | Whitelist-Bewerbung</title>
+  <meta name="description" content="Whitelist-Bewerbung von Julian für Zenkai DE." />
+  <title>Julian | Whitelist-Bewerbung · Zenkai DE</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #090b0e;
-      --surface: #12161b;
-      --surface-light: #1a2027;
-      --text: #eef0ed;
+      --bg-light: #101419;
+      --card: #141a20;
+      --text: #f1f1ed;
       --muted: #a2abb2;
-      --accent: #c53d32;
-      --accent-light: #e2584d;
-      --line: rgba(255, 255, 255, 0.1);
+      --accent: #bc3b32;
+      --accent-light: #e35b50;
+      --gold: #d6ae61;
+      --line: rgba(255, 255, 255, 0.11);
     }
 
     * {
@@ -30,53 +31,77 @@
     body {
       margin: 0;
       color: var(--text);
-      background: radial-gradient(circle at 75% 0%, #2d1718 0%, var(--bg) 42%);
-      font-family: Inter, sans-serif;
+      background:
+        radial-gradient(circle at 80% 0%, #311819 0%, transparent 32%),
+        radial-gradient(circle at 10% 60%, #171d27 0%, transparent 32%),
+        var(--bg);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
-    .background-symbol {
+    body::before,
+    body::after {
       position: fixed;
       z-index: -1;
       color: rgba(255, 255, 255, 0.025);
-      font-size: 32rem;
       font-family: serif;
+      font-size: 32rem;
       pointer-events: none;
     }
 
-    .symbol-one { top: 2rem; right: -5rem; }
-    .symbol-two { bottom: -10rem; left: -5rem; }
+    body::before {
+      content: "忍";
+      top: -7rem;
+      right: -5rem;
+    }
 
-    .navbar,
-    main,
-    footer {
-      width: min(1180px, calc(100% - 40px));
+    body::after {
+      content: "影";
+      bottom: -13rem;
+      left: -5rem;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
       margin: auto;
     }
 
+    /* Navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 11, 14, 0.86);
+      backdrop-filter: blur(14px);
+    }
+
     .navbar {
-      height: 86px;
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
-      align-items: center;
       gap: 10px;
-      color: white;
+      align-items: center;
       text-decoration: none;
+      color: white;
     }
 
-    .brand-mark {
+    .brand-symbol {
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      width: 42px;
-      height: 42px;
       border: 1px solid var(--accent);
       color: var(--accent-light);
-      font: 700 24px Cinzel, serif;
+      font: 700 22px Cinzel, serif;
     }
 
     .brand strong,
@@ -85,7 +110,7 @@
     }
 
     .brand strong {
-      font: 600 18px Cinzel, serif;
+      font: 600 16px Cinzel, serif;
       letter-spacing: 2px;
     }
 
@@ -93,49 +118,56 @@
       color: var(--muted);
       font-size: 9px;
       letter-spacing: 1px;
-      margin-top: 3px;
     }
 
     nav {
       display: flex;
+      gap: 18px;
       align-items: center;
-      gap: 24px;
     }
 
     nav a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
-    .discord-button {
-      border: 1px solid var(--line);
-      padding: 10px 15px;
-      color: white;
+    nav a:hover {
+      color: var(--accent-light);
     }
+
+    /* Hero */
 
     .hero {
       min-height: 560px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .hero-content {
+      max-width: 780px;
     }
 
     .eyebrow {
       color: var(--accent-light);
       font-size: 11px;
+      letter-spacing: 2.2px;
       font-weight: 700;
-      letter-spacing: 2px;
+      margin: 0 0 14px;
     }
 
-    h1, h2, h3 {
-      font-family: Cinzel, serif;
+    h1, h2, h3, h4 {
+      font-family: Cinzel, Georgia, serif;
     }
 
     h1 {
-      font-size: clamp(47px, 8vw, 92px);
-      line-height: 1.02;
-      margin: 14px 0;
+      margin: 0;
+      font-size: clamp(46px, 8vw, 90px);
+      line-height: 1.05;
+      letter-spacing: -1px;
     }
 
     h1 span {
@@ -143,234 +175,320 @@
     }
 
     .hero-text {
-      max-width: 570px;
+      max-width: 650px;
+      margin: 25px 0 0;
       color: var(--muted);
-      line-height: 1.8;
       font-size: 17px;
     }
 
-    .primary-button,
-    .secondary-button {
-      border: 0;
-      cursor: pointer;
-      width: fit-content;
-      margin-top: 18px;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .primary-button {
-      background: var(--accent);
-      color: white;
-    }
-
-    .primary-button:hover {
-      background: var(--accent-light);
-    }
-
-    .secondary-button {
-      background: transparent;
-      border: 1px solid var(--line);
-      color: white;
-    }
-
-    .info-section {
-      padding: 90px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    h2 {
-      font-size: clamp(30px, 5vw, 48px);
-      margin: 8px 0 30px;
-    }
-
-    .info-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .info-cards article,
-    form {
-      background: rgba(18, 22, 27, 0.9);
-      border: 1px solid var(--line);
-    }
-
-    .info-cards article {
-      padding: 25px;
-    }
-
-    .info-cards span {
-      color: var(--accent-light);
-      font: 600 25px Cinzel, serif;
-    }
-
-    .info-cards h3 {
-      margin-bottom: 8px;
-    }
-
-    .info-cards p,
-    .section-heading > p,
-    .form-hint {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .application-section {
-      padding: 80px 0 100px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    form {
-      padding: clamp(20px, 5vw, 55px);
-    }
-
-    .progress-labels {
+    .hero-meta {
       display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 11px;
-      margin-bottom: 9px;
-    }
-
-    .progress-labels .active {
-      color: var(--accent-light);
-    }
-
-    .progress-bar {
-      height: 3px;
-      background: var(--surface-light);
-      margin-bottom: 40px;
-    }
-
-    #progress {
-      height: 100%;
-      width: 25%;
-      background: var(--accent);
-      transition: 0.25s;
-    }
-
-    .form-step {
-      display: none;
-    }
-
-    .form-step.active {
-      display: block;
-    }
-
-    .form-step h3 {
-      font-size: 25px;
-      margin-top: 0;
-    }
-
-    .subheading {
-      margin-top: 38px !important;
-    }
-
-    label {
-      display: block;
-      margin: 20px 0;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    label b {
-      color: var(--accent-light);
-    }
-
-    input,
-    textarea,
-    select {
-      display: block;
-      width: 100%;
-      margin-top: 8px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      background: #0e1216;
-      color: var(--text);
-      font: 14px Inter, sans-serif;
-      outline: none;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-      line-height: 1.5;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: var(--accent);
-    }
-
-    .field-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0 20px;
-    }
-
-    .checkbox-label {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .checkbox-label input {
-      width: auto;
-      margin: 2px 0 0;
-      accent-color: var(--accent);
-    }
-
-    .finish-note {
-      padding: 16px;
-      border-left: 3px solid var(--accent);
-      background: rgba(197, 61, 50, 0.08);
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 13px;
-    }
-
-    .form-navigation {
-      display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
-    #prevButton,
-    #submitButton {
-      display: none;
-    }
-
-    footer {
-      padding: 28px 0;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
+    .meta-tag {
+      padding: 8px 12px;
+      color: #d6d8d5;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
       font-size: 12px;
     }
 
-    footer strong {
-      color: white;
+    .meta-tag b {
+      color: var(--accent-light);
+    }
+
+    /* Allgemeine Sektionen */
+
+    section {
+      padding: 82px 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      max-width: 750px;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      margin: 6px 0 10px;
+      font-size: clamp(31px, 5vw, 50px);
+      line-height: 1.2;
+    }
+
+    .section-intro {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .content-card {
+      padding: clamp(23px, 4vw, 42px);
+      background: linear-gradient(135deg, rgba(24, 30, 37, 0.96), rgba(15, 19, 24, 0.96));
+      border: 1px solid var(--line);
+    }
+
+    .content-card p:first-child {
+      margin-top: 0;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* OOC */
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.5fr;
+      gap: 20px;
+    }
+
+    .profile-name {
+      min-height: 100%;
+      padding: 32px;
+      background:
+        linear-gradient(160deg, rgba(188, 59, 50, 0.28), rgba(20, 26, 32, 0.8)),
+        var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .profile-name .initials {
+      display: grid;
+      width: 76px;
+      height: 76px;
+      margin-bottom: 25px;
+      place-items: center;
+      border: 1px solid var(--accent-light);
+      color: var(--accent-light);
+      font: 700 32px Cinzel, serif;
+    }
+
+    .profile-name h3 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .profile-name p {
+      color: var(--muted);
+      margin: 7px 0 0;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .data-item {
+      padding: 22px;
+      background: var(--bg-light);
+    }
+
+    .data-item small {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .data-item strong {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* Stärken / Schwächen */
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .list-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: rgba(20, 26, 32, 0.75);
+    }
+
+    .list-card h3 {
+      margin: 0 0 15px;
+      font-size: 21px;
+    }
+
+    .list-card.strength h3 {
+      color: #a8d79a;
+    }
+
+    .list-card.weakness h3 {
+      color: var(--gold);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    /* Onlinezeiten */
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .schedule-card {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .schedule-card h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      color: var(--accent-light);
+    }
+
+    .schedule-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* RP */
+
+    .quote-box {
+      margin-top: 25px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--accent);
+      background: rgba(188, 59, 50, 0.08);
+      color: #d7d9d6;
+      font-size: 15px;
+    }
+
+    /* Charakter */
+
+    .character-hero {
+      padding: clamp(25px, 5vw, 52px);
+      border: 1px solid rgba(214, 174, 97, 0.3);
+      background:
+        linear-gradient(120deg, rgba(96, 68, 33, 0.25), rgba(13, 17, 21, 0.95)),
+        var(--card);
+    }
+
+    .character-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .character-title h2 {
+      margin: 0;
+    }
+
+    .character-title span {
+      color: var(--gold);
+      font: 600 13px Cinzel, serif;
       letter-spacing: 1px;
     }
 
-    @media (max-width: 650px) {
-      .navbar {
-        height: 72px;
-      }
+    .character-description {
+      max-width: 780px;
+      margin: 0;
+      color: #c3c8c6;
+    }
 
-      nav a:not(.discord-button) {
+    .sheet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      background: var(--line);
+      gap: 1px;
+    }
+
+    .sheet-item {
+      min-height: 105px;
+      padding: 20px;
+      background: #11161b;
+    }
+
+    .sheet-item small {
+      display: block;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .sheet-item strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    .story {
+      margin-top: 20px;
+    }
+
+    .story p {
+      color: #c7ccca;
+    }
+
+    /* Schluss */
+
+    .closing {
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        linear-gradient(rgba(9, 11, 14, 0.6), rgba(9, 11, 14, 0.9)),
+        radial-gradient(circle at center, #3a1a1a, transparent 60%);
+      border: 1px solid var(--line);
+    }
+
+    .closing h2 {
+      margin-bottom: 20px;
+    }
+
+    .closing p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .signature {
+      margin-top: 28px !important;
+      color: var(--text) !important;
+      font: 600 22px Cinzel, serif;
+    }
+
+    footer {
+      padding: 26px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      nav a:not(:last-child) {
         display: none;
       }
 
@@ -378,389 +496,406 @@
         min-height: 500px;
       }
 
-      .info-cards,
-      .field-grid {
+      .profile-grid,
+      .two-columns,
+      .schedule,
+      .sheet-grid {
         grid-template-columns: 1fr;
       }
 
-      footer {
-        display: block;
-        line-height: 2;
+      .character-title {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .data-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="background-symbol symbol-one">忍</div>
-  <div class="background-symbol symbol-two">影</div>
+  <header>
+    <div class="container navbar">
+      <a href="#start" class="brand">
+        <span class="brand-symbol">Z</span>
+        <span>
+          <strong>ZENKAI DE</strong>
+          <small>WHITELIST-BEWERBUNG</small>
+        </span>
+      </a>
 
-  <header class="navbar">
-    <a class="brand" href="#start">
-      <span class="brand-mark">Z</span>
-      <span>
-        <strong>ZENKAI</strong>
-        <small>DE · NANOSWORLD RP</small>
-      </span>
-    </a>
-
-    <nav>
-      <a href="#infos">Server</a>
-      <a href="#bewerbung">Bewerbung</a>
-
-      <!-- Ersetze später # durch deinen Discord-Einladungslink -->
-      <a class="discord-button" href="#" target="_blank" rel="noopener">Discord</a>
-    </nav>
+      <nav>
+        <a href="#ooc">OOC</a>
+        <a href="#erfahrung">Erfahrung</a>
+        <a href="#charakter">Akito</a>
+        <a href="#schluss">Schlusswort</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="start">
-      <p class="eyebrow">NANOSWORLD · NARUTO ROLEPLAY</p>
-      <h1>Werde Teil von<br /><span>Zenkai DE.</span></h1>
+    <section class="hero container" id="start">
+      <div class="hero-content">
+        <p class="eyebrow">WHITELIST-BEWERBUNG · ZENKAI DE</p>
 
-      <p class="hero-text">
-        Erschaffe deinen eigenen Shinobi, schreibe eine einzigartige Geschichte
-        und werde Teil einer langfristigen RP-Welt.
-      </p>
+        <h1>Julian<br /><span>stellt sich vor.</span></h1>
 
-      <a class="primary-button" href="#bewerbung">
-        Whitelist starten <span>→</span>
-      </a>
-    </section>
+        <p class="hero-text">
+          Herzlich willkommen zu meiner Bewerbung für die Whitelist von Zenkai DE.
+          In dieser Bewerbung werde ich mich zunächst vorstellen und anschließend
+          meinen Charakter präsentieren, den ich auf dem Server verkörpern werde.
+          Viel Spaß beim Lesen!
+        </p>
 
-    <section class="info-section" id="infos">
-      <div>
-        <p class="eyebrow">DEIN WEG BEGINNT HIER</p>
-        <h2>Eine Bewerbung.<br />Deine Geschichte.</h2>
-      </div>
-
-      <div class="info-cards">
-        <article>
-          <span>01</span>
-          <h3>Sei ehrlich</h3>
-          <p>Wir möchten dich und deine Vorstellungen für gutes Roleplay kennenlernen.</p>
-        </article>
-
-        <article>
-          <span>02</span>
-          <h3>Nimm dir Zeit</h3>
-          <p>Beschreibe deinen Charakter nachvollziehbar und mit eigenen Ideen.</p>
-        </article>
-
-        <article>
-          <span>03</span>
-          <h3>Werde ein Shinobi</h3>
-          <p>Nach Prüfung deiner Bewerbung erhältst du eine Rückmeldung im Discord.</p>
-        </article>
+        <div class="hero-meta">
+          <span class="meta-tag"><b>Name:</b> Julian</span>
+          <span class="meta-tag"><b>Alter:</b> 18 Jahre</span>
+          <span class="meta-tag"><b>Charakter:</b> Akito</span>
+        </div>
       </div>
     </section>
 
-    <section class="application-section" id="bewerbung">
-      <div class="section-heading">
-        <p class="eyebrow">ZENKAI DE · WHITELIST</p>
-        <h2>Deine Bewerbung</h2>
-        <p>Fülle alle Bereiche sorgfältig aus. Pflichtfelder sind mit <b>*</b> markiert.</p>
+    <section id="ooc">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT I</p>
+          <h2>OOC-Daten</h2>
+          <p class="section-intro">
+            Ein kurzer Einblick in meine Person außerhalb des Roleplays.
+          </p>
+        </div>
+
+        <div class="profile-grid">
+          <article class="profile-name">
+            <div class="initials">JR</div>
+            <h3>Julian</h3>
+            <p>Whitelist-Bewerber für Zenkai DE</p>
+          </article>
+
+          <div class="data-grid">
+            <div class="data-item">
+              <small>Name</small>
+              <strong>Julian</strong>
+            </div>
+
+            <div class="data-item">
+              <small>Alter</small>
+              <strong>18 Jahre</strong>
+            </div>
+
+            <div class="data-item">
+              <small>Herkunft</small>
+              <strong>Odenwald</strong>
+            </div>
+
+            <div class="data-item">
+              <small>Hobbys</small>
+              <strong>Gaming, Sport & Coden lernen</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="two-columns">
+          <article class="list-card strength">
+            <h3>Stärken</h3>
+            <ul>
+              <li>Aktiv und engagiert</li>
+              <li>Lerne schnell und kann mich gut in neue Themen einarbeiten</li>
+              <li>Helfe anderen Menschen gerne</li>
+              <li>Kann gut mit Menschen kommunizieren</li>
+              <li>Kreativ und bringe gerne eigene Ideen ein</li>
+            </ul>
+          </article>
+
+          <article class="list-card weakness">
+            <h3>Schwächen</h3>
+            <ul>
+              <li>Lese-Rechtschreib-Schwäche</li>
+              <li>In sehr stressigen Situationen teilweise überfordert</li>
+              <li>Oft zu selbstkritisch und hinterfrage meine Leistung stark</li>
+            </ul>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <form id="applicationForm">
-        <div class="progress-wrap">
-          <div class="progress-labels">
-            <span class="active">OOC</span>
-            <span>Erfahrung</span>
-            <span>Charakter</span>
-            <span>Abschluss</span>
-          </div>
-
-          <div class="progress-bar">
-            <div id="progress"></div>
-          </div>
+    <section id="onlinezeiten">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT II</p>
+          <h2>Onlinezeiten</h2>
+          <p class="section-intro">
+            Meine üblichen Zeiten können sich bei wichtigen Terminen vereinzelt ändern.
+          </p>
         </div>
 
-        <!-- Schritt 1 -->
-        <div class="form-step active">
-          <h3>Vorwort & OOC-Daten</h3>
-          <p class="form-hint">Stelle dich kurz vor, bevor wir zu deiner RP-Erfahrung kommen.</p>
+        <div class="schedule">
+          <article class="schedule-card">
+            <h3>Montag & Mittwoch</h3>
+            <p>17:40 Uhr bis 22:30 Uhr</p>
+          </article>
 
-          <label>
-            Vorwort / kurze Einleitung <b>*</b>
-            <textarea name="vorwort" required placeholder="Moin, mein Name ist ... und ich möchte mich bei Zenkai DE bewerben, weil ..."></textarea>
-          </label>
+          <article class="schedule-card">
+            <h3>Dienstag bis Freitag</h3>
+            <p>19:30 Uhr bis 23:00 Uhr</p>
+          </article>
 
-          <div class="field-grid">
-            <label>
-              Vorname oder Rufname <b>*</b>
-              <input type="text" name="name" required placeholder="z. B. Julian" />
-            </label>
+          <article class="schedule-card">
+            <h3>Wochenende</h3>
+            <p>In der Regel von 10:00 Uhr bis 22:00 Uhr</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <label>
-              Alter <b>*</b>
-              <input type="number" name="alter" required min="14" max="99" placeholder="z. B. 18" />
-            </label>
-
-            <label>
-              Discord-Name <b>*</b>
-              <input type="text" name="discord" required placeholder="@deinname" />
-            </label>
-
-            <label>
-              Steam-Profil / Steam-ID
-              <input type="text" name="steam" placeholder="Optional" />
-            </label>
-          </div>
-
-          <h3 class="subheading">Onlinezeiten</h3>
-
-          <div class="field-grid">
-            <label>
-              Wochentage <b>*</b>
-              <input type="text" name="tage" required placeholder="z. B. Montag bis Freitag" />
-            </label>
-
-            <label>
-              Übliche Uhrzeit <b>*</b>
-              <input type="text" name="uhrzeit" required placeholder="z. B. 17:00–23:00 Uhr" />
-            </label>
-          </div>
-
-          <label>
-            Ergänzungen zu deinen Onlinezeiten
-            <textarea name="online_hinweis" placeholder="Schule, Arbeit, Urlaubszeiten oder sonstige Hinweise ..."></textarea>
-          </label>
+    <section id="whitelist">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT III</p>
+          <h2>Warum solltet ihr mich whitelisten?</h2>
         </div>
 
-        <!-- Schritt 2 -->
-        <div class="form-step">
-          <h3>Über dich & RP-Erfahrung</h3>
+        <article class="content-card">
+          <p>
+            Ihr solltet mich whitelisten, weil ich motiviert bin, langfristig und
+            ernsthaft RP auf Zenkai DE zu spielen. Ich gehe respektvoll mit anderen
+            Spielern um, halte mich an Regeln und möchte einen glaubwürdigen Charakter
+            mit eigener Geschichte entwickeln.
+          </p>
 
-          <label>
-            Wer bist du? <b>*</b>
-            <textarea name="wer_bin_ich" required placeholder="Erzähle etwas über dich, deine Interessen und wie du im Team bzw. in einer Community bist."></textarea>
-          </label>
+          <p>
+            Mir ist es wichtig, nicht nur für mich selbst RP zu machen, sondern auch
+            Situationen zu schaffen, an denen andere Spieler Spaß haben. Außerdem bin
+            ich offen für Kritik und bereit, mich weiterzuentwickeln.
+          </p>
 
-          <label>
-            Warum sollten wir dich whitelisten? <b>*</b>
-            <textarea name="warum_whitelist" required placeholder="Warum passt du zu Zenkai DE? Was macht dich zu einem guten Mitglied der Community?"></textarea>
-          </label>
-
-          <div class="field-grid">
-            <label>
-              RP-Erfahrung <b>*</b>
-              <select name="erfahrungslevel" required>
-                <option value="">Bitte auswählen</option>
-                <option>Anfänger</option>
-                <option>Fortgeschritten</option>
-                <option>Erfahren</option>
-              </select>
-            </label>
-
-            <label>
-              Dauer deiner RP-Erfahrung
-              <input type="text" name="rp_dauer" placeholder="z. B. seit zwei Jahren" />
-            </label>
+          <div class="quote-box">
+            Mein Ziel ist es, ein verlässlicher Teil der Community zu sein und gemeinsam
+            mit anderen Spielern langfristige sowie spannende RP-Situationen zu schaffen.
           </div>
+        </article>
+      </div>
+    </section>
 
-          <label>
-            Ausführliche RP-Erfahrung <b>*</b>
-            <textarea name="rp_erfahrung" required placeholder="Auf welchen Servern oder in welchen Spielen hast du RP gespielt? Welche Rollen hast du übernommen und was hast du daraus gelernt?"></textarea>
-          </label>
+    <section id="erfahrung">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT IV</p>
+          <h2>RP-Erfahrungen</h2>
+          <p class="section-intro">
+            Mehrjährige Erfahrung aus verschiedenen Settings, Rollen und Communitys.
+          </p>
         </div>
 
-        <!-- Schritt 3 -->
-        <div class="form-step">
-          <h3>Dein Charakter</h3>
-          <p class="form-hint">Der Charakter soll zu einem langfristigen und fairen RP passen.</p>
+        <article class="content-card">
+          <p>
+            Ich habe mit RP im GMod-Bereich angefangen und dabei unter anderem
+            JvS- und Manga-RP gespielt. Über die Jahre konnte ich dabei verschiedene
+            Rollen und Positionen kennenlernen.
+          </p>
 
-          <div class="field-grid">
-            <label>
-              Charaktername <b>*</b>
-              <input type="text" name="char_name" required placeholder="Vor- und Nachname" />
-            </label>
+          <p>
+            Im JvS-Bereich war ich unter anderem Ratsmitglied der Krieger sowie Darth
+            der Hexer auf dem Server NK. Darüber hinaus habe ich auf verschiedenen
+            Servern wie WOS, TFG, NexusV1, HRP und weiteren Servern gespielt, an deren
+            Namen ich mich mittlerweile nicht mehr vollständig erinnere.
+          </p>
 
-            <label>
-              Alter <b>*</b>
-              <input type="number" name="char_alter" required min="12" max="80" placeholder="z. B. 16" />
-            </label>
+          <p>
+            Im Bereich Manga-RP habe ich hauptsächlich auf Yugen gespielt. Dort war ich
+            bis zum Serverende als Elite-Jonin aktiv. Zu guter Letzt habe ich auch
+            Gothic-RP betrieben. Dabei handelt es sich um ein älteres Spiel im
+            Mittelalter-Setting, in dem hauptsächlich Schreib-RP betrieben wurde.
+            Dort war ich als Bandit 1. Klasse tätig.
+          </p>
 
-            <label>
-              Geschlecht <b>*</b>
-              <input type="text" name="char_geschlecht" required placeholder="z. B. männlich" />
-            </label>
+          <p>
+            Insgesamt habe ich rund 3.500 Stunden in GMod und etwa 500 Stunden in Gothic
+            gesammelt. Durch diese intensive RP-Erfahrung konnte ich ein gutes Verständnis
+            für verschiedene RP-Stile, Situationen und Rollen entwickeln. Daher würde ich
+            meine RP-Erfahrung als sehr umfangreich einschätzen und denke, dass ich mich
+            gut in das RP auf eurem Server einfinden und mit dem vorhandenen RP-Niveau
+            mithalten kann.
+          </p>
+        </article>
+      </div>
+    </section>
 
-            <label>
-              Dorf / Fraktion <b>*</b>
-              <input type="text" name="dorf" required placeholder="z. B. Konohagakure" />
-            </label>
-
-            <label>
-              Clan
-              <input type="text" name="clan" placeholder="Optional" />
-            </label>
-
-            <label>
-              Startrang
-              <input type="text" name="rang" placeholder="z. B. Akademist oder Genin" />
-            </label>
-          </div>
-
-          <label>
-            Erscheinungsbild <b>*</b>
-            <textarea name="aussehen" required placeholder="Wie sieht dein Charakter aus? Kleidung, Haare und besondere Merkmale ..."></textarea>
-          </label>
-
-          <div class="field-grid">
-            <label>
-              Persönlichkeit <b>*</b>
-              <textarea name="persoenlichkeit" required placeholder="Charakterzüge, Verhalten und Werte ..."></textarea>
-            </label>
-
-            <label>
-              Stärken und Schwächen <b>*</b>
-              <textarea name="staerken_schwaechen" required placeholder="Bitte ausgewogen und realistisch beschreiben."></textarea>
-            </label>
-          </div>
-
-          <label>
-            Kampfstil / Fähigkeiten
-            <textarea name="faehigkeiten" placeholder="Beschreibe deine Ideen passend zum Serverkonzept."></textarea>
-          </label>
-
-          <label>
-            Hintergrundgeschichte <b>*</b>
-            <textarea name="geschichte" required placeholder="Woher kommt dein Charakter? Was hat ihn geprägt? Warum verfolgt er seine Ziele?"></textarea>
-          </label>
-
-          <label>
-            Ziele deines Charakters <b>*</b>
-            <textarea name="char_ziele" required placeholder="Welche langfristigen Ziele und Entwicklungen wünschst du dir im RP?"></textarea>
-          </label>
+    <section id="charakter">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT V</p>
+          <h2>Mein RP-Charakter</h2>
+          <p class="section-intro">
+            Die Charakterakte meines Akademieschülers Akito.
+          </p>
         </div>
 
-        <!-- Schritt 4 -->
-        <div class="form-step">
-          <h3>Schlusswort</h3>
-
-          <label>
-            Dein Schlusswort <b>*</b>
-            <textarea name="schlusswort" required placeholder="Gibt es noch etwas, das du dem Team mitteilen möchtest?"></textarea>
-          </label>
-
-          <label class="checkbox-label">
-            <input type="checkbox" required />
-            <span>Ich bestätige, dass meine Angaben wahrheitsgemäß sind und dass ich die Serverregeln gelesen habe. <b>*</b></span>
-          </label>
-
-          <label class="checkbox-label">
-            <input type="checkbox" required />
-            <span>Ich bin damit einverstanden, dass das Zenkai-DE-Team meine Angaben zur Bearbeitung der Bewerbung verwendet. <b>*</b></span>
-          </label>
-
-          <div class="finish-note">
-            <strong>Hinweis:</strong> In dieser ersten GitHub-Pages-Version wird die Bewerbung als Datei heruntergeladen.
-            Damit Bewerbungen direkt an das Team gesendet werden, kann später ein sicherer Formular-Service eingebunden werden.
+        <article class="character-hero">
+          <div class="character-title">
+            <div>
+              <p class="eyebrow">CHARAKTERAKTE</p>
+              <h2>Akito</h2>
+            </div>
+            <span>AKADEMIESCHÜLER</span>
           </div>
+
+          <p class="character-description">
+            Akito ist ein junger und motivierter Akademieschüler, der sich durch
+            Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz seines
+            jungen Alters möchte er sich Schritt für Schritt weiterentwickeln und
+            eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
+          </p>
+
+          <div class="sheet-grid">
+            <div class="sheet-item">
+              <small>Name</small>
+              <strong>Akito</strong>
+            </div>
+
+            <div class="sheet-item">
+              <small>Alter</small>
+              <strong>8 Jahre</strong>
+            </div>
+
+            <div class="sheet-item">
+              <small>Rang</small>
+              <strong>Akademieschüler</strong>
+            </div>
+
+            <div class="sheet-item">
+              <small>Familie</small>
+              <strong>Gyomei & Kira</strong>
+            </div>
+
+            <div class="sheet-item">
+              <small>Element</small>
+              <strong>Unbekannt</strong>
+            </div>
+
+            <div class="sheet-item">
+              <small>Kampfstil</small>
+              <strong>Taijutsu</strong>
+            </div>
+          </div>
+        </article>
+
+        <div class="two-columns">
+          <article class="list-card strength">
+            <h3>Eigenschaften</h3>
+            <ul>
+              <li>Diszipliniert</li>
+              <li>Loyal</li>
+              <li>Humorvoll</li>
+              <li>Denkt bei Kritik über sein Verhalten nach</li>
+              <li>Direkt und teilweise stur</li>
+            </ul>
+          </article>
+
+          <article class="list-card weakness">
+            <h3>Aussehen</h3>
+            <ul>
+              <li>Kurze, schwarze Haare</li>
+              <li>Grüne Augen und kindliches Aussehen</li>
+              <li>Normale Shinobi-Kleidung</li>
+              <li>Stirnband an der Stirn</li>
+              <li>Kunai am Bein und Shuriken in der Gürteltasche</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="geschichte">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABSCHNITT VI</p>
+          <h2>Hintergrundgeschichte – Akito</h2>
         </div>
 
-        <div class="form-navigation">
-          <button type="button" class="secondary-button" id="prevButton">← Zurück</button>
-          <button type="button" class="primary-button" id="nextButton">Weiter →</button>
-          <button type="submit" class="primary-button" id="submitButton">Bewerbung herunterladen</button>
-        </div>
-      </form>
+        <article class="content-card story">
+          <p>
+            Akito ist ein achtjähriger Akademieschüler aus <strong>[Dorf eintragen]</strong>.
+            Er lebt gemeinsam mit seinen Eltern Gyomei und Kira in einem einfachen,
+            aber liebevollen Zuhause. Sein Vater Gyomei hat ihm früh beigebracht, dass
+            ein Shinobi nicht nur an seiner Stärke gemessen wird, sondern vor allem
+            daran, ob er zu seinem Wort steht und seine Kameraden beschützt. Seine Mutter
+            Kira sorgt dafür, dass Akito trotz seines großen Traums weiterhin Kind sein
+            darf und nicht vergisst, auch Spaß zu haben.
+          </p>
+
+          <p>
+            Schon seit seiner frühen Kindheit interessiert sich Akito für Shinobi und
+            deren Geschichten. Besonders die Erzählungen über legendäre Ninja, die ihr
+            Dorf beschützten und trotz schwieriger Situationen niemals aufgegeben haben,
+            begeistern ihn. Sein größter Traum ist es deshalb, eines Tages selbst ein
+            legendärer Sannin zu werden. Akito weiß jedoch, dass er noch einen sehr
+            langen Weg vor sich hat und dieser Traum nur durch Training, Erfahrung und
+            Zusammenarbeit erreicht werden kann.
+          </p>
+
+          <p>
+            In der Akademie gilt Akito als diszipliniert und aufmerksam. Wenn er sich ein
+            Ziel setzt, übt er so lange, bis er zumindest eine Verbesserung bemerkt.
+            Dabei kann er jedoch auch sehr direkt und stur sein. Wenn er überzeugt ist,
+            im Recht zu sein, fällt es ihm schwer, seine Meinung sofort zu ändern. Nach
+            Kritik denkt er aber meist lange über seine Fehler nach und versucht, es beim
+            nächsten Mal besser zu machen.
+          </p>
+
+          <p>
+            Akito kommt gut mit anderen Kindern zurecht, auch wenn sein Humor manchmal
+            etwas unpassend sein kann. Er versucht mit kleinen Witzen und lockeren
+            Sprüchen, angespannte Situationen aufzulockern. Gegenüber Menschen, die ihm
+            wichtig sind, ist er sehr loyal. Er würde seine Freunde nicht einfach allein
+            lassen, selbst wenn er dabei Angst hat oder sich unsicher fühlt.
+          </p>
+
+          <p>
+            Sein bevorzugter Kampfstil ist Taijutsu. Akito trainiert vor allem seine
+            Beweglichkeit, seine Reaktion und den Umgang mit einfachen Nahkampftechniken.
+            Er trägt zwar bereits Kunai und Shuriken bei sich, besitzt darin aber noch
+            wenig Erfahrung und muss lernen, verantwortungsvoll damit umzugehen. Seine
+            Chakra-Natur ist bisher unbekannt, weshalb er sich aktuell auf die Grundlagen
+            konzentriert, anstatt nach besonderen Fähigkeiten zu suchen.
+          </p>
+
+          <p>
+            Akito ist noch kein außergewöhnlich starker Shinobi. Er ist jung, macht Fehler
+            und überschätzt sich manchmal. Doch er besitzt eine große Motivation, einen
+            starken Willen und den Wunsch, sich stetig weiterzuentwickeln. Sein Ziel ist
+            nicht nur, eines Tages ein legendärer Sannin zu werden, sondern auch ein
+            Shinobi, auf den seine Familie, seine Freunde und sein Dorf vertrauen können.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="schluss">
+      <div class="container">
+        <article class="closing">
+          <p class="eyebrow">SCHLUSSWORT</p>
+          <h2>Vielen Dank für eure Zeit.</h2>
+
+          <p>
+            Ich hoffe, meine Bewerbung konnte euch überzeugen und dass ich die Chance
+            bekomme, auf eurem Server zu spielen. Ich würde mich freuen, Teil von
+            Zenkai DE zu werden und gemeinsam mit der Community spannendes Roleplay
+            zu erleben.
+          </p>
+
+          <p class="signature">Mit freundlichen Grüßen<br />Julian</p>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div><strong>ZENKAI DE</strong><span> · NanosWorld Naruto RP</span></div>
-    <div>© 2026 Zenkai DE · Whitelist-Portal</div>
+  <footer class="container">
+    Whitelist-Bewerbung von Julian · Zenkai DE · 2026
   </footer>
-
-  <script>
-    const steps = document.querySelectorAll(".form-step");
-    const labels = document.querySelectorAll(".progress-labels span");
-    const progress = document.getElementById("progress");
-    const previousButton = document.getElementById("prevButton");
-    const nextButton = document.getElementById("nextButton");
-    const submitButton = document.getElementById("submitButton");
-    const form = document.getElementById("applicationForm");
-
-    let currentStep = 0;
-
-    function updateForm() {
-      steps.forEach((step, index) => {
-        step.classList.toggle("active", index === currentStep);
-      });
-
-      labels.forEach((label, index) => {
-        label.classList.toggle("active", index === currentStep);
-      });
-
-      progress.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
-
-      previousButton.style.display = currentStep === 0 ? "none" : "block";
-      nextButton.style.display = currentStep === steps.length - 1 ? "none" : "block";
-      submitButton.style.display = currentStep === steps.length - 1 ? "block" : "none";
-    }
-
-    function validateCurrentStep() {
-      const fields = steps[currentStep].querySelectorAll(
-        "input[required], textarea[required], select[required]"
-      );
-
-      for (const field of fields) {
-        if (!field.checkValidity()) {
-          field.reportValidity();
-          return false;
-        }
-      }
-
-      return true;
-    }
-
-    nextButton.addEventListener("click", () => {
-      if (validateCurrentStep() && currentStep < steps.length - 1) {
-        currentStep++;
-        updateForm();
-
-        document.getElementById("bewerbung").scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-
-    previousButton.addEventListener("click", () => {
-      if (currentStep > 0) {
-        currentStep--;
-        updateForm();
-      }
-    });
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (!validateCurrentStep()) return;
-
-      const data = Object.fromEntries(new FormData(form).entries());
-      data.erstellt_am = new Date().toLocaleString("de-DE");
-
-      const file = new Blob(
-        [JSON.stringify(data, null, 2)],
-        { type: "application/json" }
-      );
-
-      const link = document.createElement("a");
-      const characterName = (data.char_name || "Charakter")
-        .replaceAll(" ", "-")
-        .replace(/[^a-zA-Z0-9äöüÄÖÜß-]/g, "");
-
-      link.href = URL.createObjectURL(file);
-      link.download = `Zenkai-DE-Bewerbung-${characterName}.json`;
-      link.click();
-
-      alert("Deine Bewerbung wurde erfolgreich als Datei heruntergeladen.");
-    });
-
-    updateForm();
-  </script>
 </body>
 </html>
+
+
