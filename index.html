@@ -563,7 +563,9 @@
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT I</p>
           <h2>OOC-Daten</h2>
-          <p class="section-intro">Ein kurzer Einblick in meine Person außerhalb des Roleplays.</p>
+          <p class="section-intro">
+            Ein kurzer Einblick in meine Person außerhalb des Roleplays.
+          </p>
         </div>
 
         <div class="data-grid">
@@ -602,7 +604,9 @@
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT II</p>
           <h2>Onlinezeiten</h2>
-          <p class="section-intro">Meine üblichen Zeiten können sich bei wichtigen Terminen vereinzelt ändern.</p>
+          <p class="section-intro">
+            Meine üblichen Zeiten können sich bei wichtigen Terminen vereinzelt ändern.
+          </p>
         </div>
 
         <div class="schedule">
@@ -699,7 +703,9 @@
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT V</p>
           <h2>Mein RP-Charakter</h2>
-          <p class="section-intro">Die Charakterakte meines Akademieschülers Akito.</p>
+          <p class="section-intro">
+            Die Charakterakte meines Akademieschülers Akito.
+          </p>
         </div>
 
         <article class="character-hero">
@@ -713,19 +719,21 @@
                 <p class="eyebrow">CHARAKTERAKTE</p>
                 <h2>Akito</h2>
               </div>
+
               <span>AKADEMIESCHÜLER</span>
             </div>
 
             <p class="character-description">
-              Akito ist ein junger und motivierter Akademieschüler, der sich durch
-              Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz seines
-              jungen Alters möchte er sich Schritt für Schritt weiterentwickeln und
-              eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
+              Akito ist ein junger und motivierter Akademieschüler aus Sunagakure, der
+              sich durch Disziplin, Loyalität und seinen großen Traum auszeichnet. Trotz
+              seines jungen Alters möchte er sich Schritt für Schritt weiterentwickeln
+              und eines Tages ein Shinobi werden, auf den sein Dorf vertrauen kann.
             </p>
 
             <div class="sheet-grid">
               <div class="sheet-item"><small>Name</small><strong>Akito</strong></div>
               <div class="sheet-item"><small>Alter</small><strong>8 Jahre</strong></div>
+              <div class="sheet-item"><small>Herkunft</small><strong>Sunagakure</strong></div>
               <div class="sheet-item"><small>Rang</small><strong>Akademieschüler</strong></div>
               <div class="sheet-item"><small>Familie</small><strong>Gyomei & Kira</strong></div>
               <div class="sheet-item"><small>Element</small><strong>Unbekannt</strong></div>
@@ -757,6 +765,44 @@
             </ul>
           </article>
         </div>
+
+        <div class="two-columns">
+          <article class="list-card strength">
+            <h3>Wissen & Kenntnisse</h3>
+            <ul>
+              <li>Grundwissen über die Clans von Sunagakure</li>
+              <li>Grundlegendes Wissen über Ninja-Werkzeuge</li>
+              <li>Kennt Kunai, Shuriken und Senbon in der Theorie</li>
+              <li>Grundkenntnisse über Papierbomben beziehungsweise Sprengsiegel</li>
+              <li>Grundwissen über die Chakra-Punkte im menschlichen Körper</li>
+            </ul>
+          </article>
+
+          <article class="list-card weakness">
+            <h3>Theoretisches Ninja-Wissen</h3>
+            <ul>
+              <li>Grundwissen über die natürlichen Chakra-Elemente</li>
+              <li>Weiß, dass seine eigene Chakra-Natur noch unbekannt ist</li>
+              <li>Grundlegendes Wissen über Kekkei Genkai</li>
+              <li>Kennt das Sand-Kekkei-Genkai aus Geschichten, Unterricht oder Büchern</li>
+              <li>Besitzt selbst kein Sand-Kekkei-Genkai und kann es nicht anwenden</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="content-card" style="margin-top: 20px;">
+          <p class="eyebrow">LANGFRISTIGE ENTWICKLUNG</p>
+          <h3 style="margin-top: 0;">Akitos Ziele</h3>
+
+          <ul>
+            <li>Eine eigene Kampftechnik zu entwickeln, die zu seinem Kampfstil und seiner Persönlichkeit passt.</li>
+            <li>Seinen eigenen Weg als Shinobi zu finden und nicht nur Erwartungen anderer zu erfüllen.</li>
+            <li>Eine Person zu finden, zu der er langfristig aufschauen und von der er lernen kann.</li>
+            <li>Seine Sturheit und Direktheit so einzusetzen, dass sie zu einer Stärke für ihn und seine Freunde wird.</li>
+            <li>Eine echte Freundschaft aufzubauen, die ihn auch außerhalb des Trainings weiterbringt.</li>
+            <li>Eine persönliche Regel zu entwickeln, an die er sich als Shinobi halten möchte: Niemanden zu töten, soweit es ihm möglich ist.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -769,7 +815,7 @@
 
         <article class="content-card story">
           <p>
-            Akito ist ein achtjähriger Akademieschüler aus <strong>[Dorf eintragen]</strong>.
+            Akito ist ein achtjähriger Akademieschüler aus <strong>Sunagakure</strong>.
             Er lebt gemeinsam mit seinen Eltern Gyomei und Kira in einem einfachen, aber
             liebevollen Zuhause. Sein Vater Gyomei hat ihm früh beigebracht, dass ein
             Shinobi nicht nur an seiner Stärke gemessen wird, sondern vor allem daran, ob
@@ -846,7 +892,6 @@
         document.documentElement.scrollHeight - window.innerHeight;
 
       const percentage = (window.scrollY / scrollableHeight) * 100;
-
       readingProgress.style.width = `${percentage}%`;
 
       if (window.scrollY > 500) {
