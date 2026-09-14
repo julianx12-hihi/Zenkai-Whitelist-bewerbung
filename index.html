@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Whitelist-Bewerbung von Julian für Zenkai DE." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Whitelist-Bewerbung von Julian für Zenkai DE.">
   <title>Julian | Whitelist-Bewerbung · Zenkai DE</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +67,7 @@
       margin: auto;
     }
 
-    /* Navigation */
+    /* Kopfbereich */
 
     header {
       position: sticky;
@@ -82,8 +82,6 @@
       min-height: 76px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
     }
 
     .brand {
@@ -120,28 +118,10 @@
       letter-spacing: 1px;
     }
 
-    nav {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--accent-light);
-    }
-
-    /* Hero */
+    /* Startbereich */
 
     .hero {
-      min-height: 560px;
+      min-height: 490px;
       display: flex;
       align-items: center;
       padding: 90px 0;
@@ -159,19 +139,23 @@
       margin: 0 0 14px;
     }
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3 {
       font-family: Cinzel, Georgia, serif;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(46px, 8vw, 90px);
+      font-size: clamp(55px, 9vw, 95px);
       line-height: 1.05;
-      letter-spacing: -1px;
+      color: var(--accent-light);
     }
 
-    h1 span {
-      color: var(--accent-light);
+    h2 {
+      margin: 6px 0 10px;
+      font-size: clamp(31px, 5vw, 50px);
+      line-height: 1.2;
     }
 
     .hero-text {
@@ -181,26 +165,7 @@
       font-size: 17px;
     }
 
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .meta-tag {
-      padding: 8px 12px;
-      color: #d6d8d5;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.03);
-      font-size: 12px;
-    }
-
-    .meta-tag b {
-      color: var(--accent-light);
-    }
-
-    /* Allgemeine Sektionen */
+    /* Allgemeine Bereiche */
 
     section {
       padding: 82px 0;
@@ -213,12 +178,6 @@
     .section-heading {
       max-width: 750px;
       margin-bottom: 35px;
-    }
-
-    h2 {
-      margin: 6px 0 10px;
-      font-size: clamp(31px, 5vw, 50px);
-      line-height: 1.2;
     }
 
     .section-intro {
@@ -240,43 +199,7 @@
       margin-bottom: 0;
     }
 
-    /* OOC */
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.5fr;
-      gap: 20px;
-    }
-
-    .profile-name {
-      min-height: 100%;
-      padding: 32px;
-      background:
-        linear-gradient(160deg, rgba(188, 59, 50, 0.28), rgba(20, 26, 32, 0.8)),
-        var(--card);
-      border: 1px solid var(--line);
-    }
-
-    .profile-name .initials {
-      display: grid;
-      width: 76px;
-      height: 76px;
-      margin-bottom: 25px;
-      place-items: center;
-      border: 1px solid var(--accent-light);
-      color: var(--accent-light);
-      font: 700 32px Cinzel, serif;
-    }
-
-    .profile-name h3 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    .profile-name p {
-      color: var(--muted);
-      margin: 7px 0 0;
-    }
+    /* OOC-Daten */
 
     .data-grid {
       display: grid;
@@ -287,7 +210,7 @@
     }
 
     .data-item {
-      padding: 22px;
+      padding: 25px;
       background: var(--bg-light);
     }
 
@@ -305,8 +228,6 @@
       font-size: 15px;
       font-weight: 600;
     }
-
-    /* Stärken / Schwächen */
 
     .two-columns {
       display: grid;
@@ -370,7 +291,7 @@
       font-size: 14px;
     }
 
-    /* RP */
+    /* Whitelist */
 
     .quote-box {
       margin-top: 25px;
@@ -453,7 +374,7 @@
       color: #c7ccca;
     }
 
-    /* Schluss */
+    /* Schlusswort */
 
     .closing {
       text-align: center;
@@ -488,28 +409,20 @@
     }
 
     @media (max-width: 760px) {
-      nav a:not(:last-child) {
-        display: none;
-      }
-
       .hero {
-        min-height: 500px;
+        min-height: 420px;
       }
 
-      .profile-grid,
       .two-columns,
       .schedule,
-      .sheet-grid {
+      .sheet-grid,
+      .data-grid {
         grid-template-columns: 1fr;
       }
 
       .character-title {
         align-items: start;
         flex-direction: column;
-      }
-
-      .data-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -525,13 +438,6 @@
           <small>WHITELIST-BEWERBUNG</small>
         </span>
       </a>
-
-      <nav>
-        <a href="#ooc">OOC</a>
-        <a href="#erfahrung">Erfahrung</a>
-        <a href="#charakter">Akito</a>
-        <a href="#schluss">Schlusswort</a>
-      </nav>
     </div>
   </header>
 
@@ -540,7 +446,7 @@
       <div class="hero-content">
         <p class="eyebrow">WHITELIST-BEWERBUNG · ZENKAI DE</p>
 
-        <h1>Julian<br /><span></span></h1>
+        <h1>Julian</h1>
 
         <p class="hero-text">
           Herzlich willkommen zu meiner Bewerbung für die Whitelist von Zenkai DE.
@@ -548,8 +454,6 @@
           meinen Charakter präsentieren, den ich auf dem Server verkörpern werde.
           Viel Spaß beim Lesen!
         </p>
-        
-        </div>
       </div>
     </section>
 
@@ -563,33 +467,25 @@
           </p>
         </div>
 
-        <div class="profile-grid">
-          <article class="profile-name">
-            <div class="initials">JR</div>
-            <h3>Julian</h3>
-            <p>Whitelist-Bewerber für Zenkai DE</p>
-          </article>
+        <div class="data-grid">
+          <div class="data-item">
+            <small>Name</small>
+            <strong>Julian</strong>
+          </div>
 
-          <div class="data-grid">
-            <div class="data-item">
-              <small>Name</small>
-              <strong>Julian</strong>
-            </div>
+          <div class="data-item">
+            <small>Alter</small>
+            <strong>18 Jahre</strong>
+          </div>
 
-            <div class="data-item">
-              <small>Alter</small>
-              <strong>18 Jahre</strong>
-            </div>
+          <div class="data-item">
+            <small>Herkunft</small>
+            <strong>Odenwald</strong>
+          </div>
 
-            <div class="data-item">
-              <small>Herkunft</small>
-              <strong>Odenwald</strong>
-            </div>
-
-            <div class="data-item">
-              <small>Hobbys</small>
-              <strong>Gaming, Sport & Coden lernen</strong>
-            </div>
+          <div class="data-item">
+            <small>Hobbys</small>
+            <strong>Gaming, Basketball, Volleyball & Coden lernen</strong>
           </div>
         </div>
 
@@ -680,9 +576,6 @@
         <div class="section-heading">
           <p class="eyebrow">ABSCHNITT IV</p>
           <h2>RP-Erfahrungen</h2>
-          <p class="section-intro">
-            Mehrjährige Erfahrung aus verschiedenen Settings, Rollen und Communitys.
-          </p>
         </div>
 
         <article class="content-card">
@@ -735,6 +628,7 @@
               <p class="eyebrow">CHARAKTERAKTE</p>
               <h2>Akito</h2>
             </div>
+
             <span>AKADEMIESCHÜLER</span>
           </div>
 
@@ -882,7 +776,10 @@
             zu erleben.
           </p>
 
-          <p class="signature">Mit freundlichen Grüßen<br />Julian</p>
+          <p class="signature">
+            Mit freundlichen Grüßen<br>
+            Julian
+          </p>
         </article>
       </div>
     </section>
@@ -893,5 +790,6 @@
   </footer>
 </body>
 </html>
+
 
 
