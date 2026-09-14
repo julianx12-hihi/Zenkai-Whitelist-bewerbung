@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Whitelist-Bewerbung für Zenkai DE – NanosWorld Naruto RP." />
+  <title>Zenkai DE | Whitelist-Bewerbung</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #090b0e;
+      --surface: #12161b;
+      --surface-light: #1a2027;
+      --text: #eef0ed;
+      --muted: #a2abb2;
+      --accent: #c53d32;
+      --accent-light: #e2584d;
+      --line: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(circle at 75% 0%, #2d1718 0%, var(--bg) 42%);
+      font-family: Inter, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .background-symbol {
+      position: fixed;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.025);
+      font-size: 32rem;
+      font-family: serif;
+      pointer-events: none;
+    }
+
+    .symbol-one { top: 2rem; right: -5rem; }
+    .symbol-two { bottom: -10rem; left: -5rem; }
+
+    .navbar,
+    main,
+    footer {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .navbar {
+      height: 86px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--accent);
+      color: var(--accent-light);
+      font: 700 24px Cinzel, serif;
+    }
+
+    .brand strong,
+    .brand small {
+      display: block;
+    }
+
+    .brand strong {
+      font: 600 18px Cinzel, serif;
+      letter-spacing: 2px;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .discord-button {
+      border: 1px solid var(--line);
+      padding: 10px 15px;
+      color: white;
+    }
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      color: var(--accent-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    h1, h2, h3 {
+      font-family: Cinzel, serif;
+    }
+
+    h1 {
+      font-size: clamp(47px, 8vw, 92px);
+      line-height: 1.02;
+      margin: 14px 0;
+    }
+
+    h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-text {
+      max-width: 570px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      border: 0;
+      cursor: pointer;
+      width: fit-content;
+      margin-top: 18px;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .primary-button {
+      background: var(--accent);
+      color: white;
+    }
+
+    .primary-button:hover {
+      background: var(--accent-light);
+    }
+
+    .secondary-button {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: white;
+    }
+
+    .info-section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin: 8px 0 30px;
+    }
+
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .info-cards article,
+    form {
+      background: rgba(18, 22, 27, 0.9);
+      border: 1px solid var(--line);
+    }
+
+    .info-cards article {
+      padding: 25px;
+    }
+
+    .info-cards span {
+      color: var(--accent-light);
+      font: 600 25px Cinzel, serif;
+    }
+
+    .info-cards h3 {
+      margin-bottom: 8px;
+    }
+
+    .info-cards p,
+    .section-heading > p,
+    .form-hint {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .application-section {
+      padding: 80px 0 100px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    form {
+      padding: clamp(20px, 5vw, 55px);
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 9px;
+    }
+
+    .progress-labels .active {
+      color: var(--accent-light);
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: var(--surface-light);
+      margin-bottom: 40px;
+    }
+
+    #progress {
+      height: 100%;
+      width: 25%;
+      background: var(--accent);
+      transition: 0.25s;
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    .form-step h3 {
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    .subheading {
+      margin-top: 38px !important;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    label b {
+      color: var(--accent-light);
+    }
+
+    input,
+    textarea,
+    select {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #0e1216;
+      color: var(--text);
+      font: 14px Inter, sans-serif;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--accent);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 20px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .checkbox-label input {
+      width: auto;
+      margin: 2px 0 0;
+      accent-color: var(--accent);
+    }
+
+    .finish-note {
+      padding: 16px;
+      border-left: 3px solid var(--accent);
+      background: rgba(197, 61, 50, 0.08);
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+    }
+
+    .form-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    #prevButton,
+    #submitButton {
+      display: none;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        height: 72px;
+      }
+
+      nav a:not(.discord-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .info-cards,
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        display: block;
+        line-height: 2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-symbol symbol-one">忍</div>
+  <div class="background-symbol symbol-two">影</div>
+
+  <header class="navbar">
+    <a class="brand" href="#start">
+      <span class="brand-mark">Z</span>
+      <span>
+        <strong>ZENKAI</strong>
+        <small>DE · NANOSWORLD RP</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#infos">Server</a>
+      <a href="#bewerbung">Bewerbung</a>
+
+      <!-- Ersetze später # durch deinen Discord-Einladungslink -->
+      <a class="discord-button" href="#" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <p class="eyebrow">NANOSWORLD · NARUTO ROLEPLAY</p>
+      <h1>Werde Teil von<br /><span>Zenkai DE.</span></h1>
+
+      <p class="hero-text">
+        Erschaffe deinen eigenen Shinobi, schreibe eine einzigartige Geschichte
+        und werde Teil einer langfristigen RP-Welt.
+      </p>
+
+      <a class="primary-button" href="#bewerbung">
+        Whitelist starten <span>→</span>
+      </a>
+    </section>
+
+    <section class="info-section" id="infos">
+      <div>
+        <p class="eyebrow">DEIN WEG BEGINNT HIER</p>
+        <h2>Eine Bewerbung.<br />Deine Geschichte.</h2>
+      </div>
+
+      <div class="info-cards">
+        <article>
+          <span>01</span>
+          <h3>Sei ehrlich</h3>
+          <p>Wir möchten dich und deine Vorstellungen für gutes Roleplay kennenlernen.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Nimm dir Zeit</h3>
+          <p>Beschreibe deinen Charakter nachvollziehbar und mit eigenen Ideen.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Werde ein Shinobi</h3>
+          <p>Nach Prüfung deiner Bewerbung erhältst du eine Rückmeldung im Discord.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="application-section" id="bewerbung">
+      <div class="section-heading">
+        <p class="eyebrow">ZENKAI DE · WHITELIST</p>
+        <h2>Deine Bewerbung</h2>
+        <p>Fülle alle Bereiche sorgfältig aus. Pflichtfelder sind mit <b>*</b> markiert.</p>
+      </div>
+
+      <form id="applicationForm">
+        <div class="progress-wrap">
+          <div class="progress-labels">
+            <span class="active">OOC</span>
+            <span>Erfahrung</span>
+            <span>Charakter</span>
+            <span>Abschluss</span>
+          </div>
+
+          <div class="progress-bar">
+            <div id="progress"></div>
+          </div>
+        </div>
+
+        <!-- Schritt 1 -->
+        <div class="form-step active">
+          <h3>Vorwort & OOC-Daten</h3>
+          <p class="form-hint">Stelle dich kurz vor, bevor wir zu deiner RP-Erfahrung kommen.</p>
+
+          <label>
+            Vorwort / kurze Einleitung <b>*</b>
+            <textarea name="vorwort" required placeholder="Moin, mein Name ist ... und ich möchte mich bei Zenkai DE bewerben, weil ..."></textarea>
+          </label>
+
+          <div class="field-grid">
+            <label>
+              Vorname oder Rufname <b>*</b>
+              <input type="text" name="name" required placeholder="z. B. Julian" />
+            </label>
+
+            <label>
+              Alter <b>*</b>
+              <input type="number" name="alter" required min="14" max="99" placeholder="z. B. 18" />
+            </label>
+
+            <label>
+              Discord-Name <b>*</b>
+              <input type="text" name="discord" required placeholder="@deinname" />
+            </label>
+
+            <label>
+              Steam-Profil / Steam-ID
+              <input type="text" name="steam" placeholder="Optional" />
+            </label>
+          </div>
+
+          <h3 class="subheading">Onlinezeiten</h3>
+
+          <div class="field-grid">
+            <label>
+              Wochentage <b>*</b>
+              <input type="text" name="tage" required placeholder="z. B. Montag bis Freitag" />
+            </label>
+
+            <label>
+              Übliche Uhrzeit <b>*</b>
+              <input type="text" name="uhrzeit" required placeholder="z. B. 17:00–23:00 Uhr" />
+            </label>
+          </div>
+
+          <label>
+            Ergänzungen zu deinen Onlinezeiten
+            <textarea name="online_hinweis" placeholder="Schule, Arbeit, Urlaubszeiten oder sonstige Hinweise ..."></textarea>
+          </label>
+        </div>
+
+        <!-- Schritt 2 -->
+        <div class="form-step">
+          <h3>Über dich & RP-Erfahrung</h3>
+
+          <label>
+            Wer bist du? <b>*</b>
+            <textarea name="wer_bin_ich" required placeholder="Erzähle etwas über dich, deine Interessen und wie du im Team bzw. in einer Community bist."></textarea>
+          </label>
+
+          <label>
+            Warum sollten wir dich whitelisten? <b>*</b>
+            <textarea name="warum_whitelist" required placeholder="Warum passt du zu Zenkai DE? Was macht dich zu einem guten Mitglied der Community?"></textarea>
+          </label>
+
+          <div class="field-grid">
+            <label>
+              RP-Erfahrung <b>*</b>
+              <select name="erfahrungslevel" required>
+                <option value="">Bitte auswählen</option>
+                <option>Anfänger</option>
+                <option>Fortgeschritten</option>
+                <option>Erfahren</option>
+              </select>
+            </label>
+
+            <label>
+              Dauer deiner RP-Erfahrung
+              <input type="text" name="rp_dauer" placeholder="z. B. seit zwei Jahren" />
+            </label>
+          </div>
+
+          <label>
+            Ausführliche RP-Erfahrung <b>*</b>
+            <textarea name="rp_erfahrung" required placeholder="Auf welchen Servern oder in welchen Spielen hast du RP gespielt? Welche Rollen hast du übernommen und was hast du daraus gelernt?"></textarea>
+          </label>
+        </div>
+
+        <!-- Schritt 3 -->
+        <div class="form-step">
+          <h3>Dein Charakter</h3>
+          <p class="form-hint">Der Charakter soll zu einem langfristigen und fairen RP passen.</p>
+
+          <div class="field-grid">
+            <label>
+              Charaktername <b>*</b>
+              <input type="text" name="char_name" required placeholder="Vor- und Nachname" />
+            </label>
+
+            <label>
+              Alter <b>*</b>
+              <input type="number" name="char_alter" required min="12" max="80" placeholder="z. B. 16" />
+            </label>
+
+            <label>
+              Geschlecht <b>*</b>
+              <input type="text" name="char_geschlecht" required placeholder="z. B. männlich" />
+            </label>
+
+            <label>
+              Dorf / Fraktion <b>*</b>
+              <input type="text" name="dorf" required placeholder="z. B. Konohagakure" />
+            </label>
+
+            <label>
+              Clan
+              <input type="text" name="clan" placeholder="Optional" />
+            </label>
+
+            <label>
+              Startrang
+              <input type="text" name="rang" placeholder="z. B. Akademist oder Genin" />
+            </label>
+          </div>
+
+          <label>
+            Erscheinungsbild <b>*</b>
+            <textarea name="aussehen" required placeholder="Wie sieht dein Charakter aus? Kleidung, Haare und besondere Merkmale ..."></textarea>
+          </label>
+
+          <div class="field-grid">
+            <label>
+              Persönlichkeit <b>*</b>
+              <textarea name="persoenlichkeit" required placeholder="Charakterzüge, Verhalten und Werte ..."></textarea>
+            </label>
+
+            <label>
+              Stärken und Schwächen <b>*</b>
+              <textarea name="staerken_schwaechen" required placeholder="Bitte ausgewogen und realistisch beschreiben."></textarea>
+            </label>
+          </div>
+
+          <label>
+            Kampfstil / Fähigkeiten
+            <textarea name="faehigkeiten" placeholder="Beschreibe deine Ideen passend zum Serverkonzept."></textarea>
+          </label>
+
+          <label>
+            Hintergrundgeschichte <b>*</b>
+            <textarea name="geschichte" required placeholder="Woher kommt dein Charakter? Was hat ihn geprägt? Warum verfolgt er seine Ziele?"></textarea>
+          </label>
+
+          <label>
+            Ziele deines Charakters <b>*</b>
+            <textarea name="char_ziele" required placeholder="Welche langfristigen Ziele und Entwicklungen wünschst du dir im RP?"></textarea>
+          </label>
+        </div>
+
+        <!-- Schritt 4 -->
+        <div class="form-step">
+          <h3>Schlusswort</h3>
+
+          <label>
+            Dein Schlusswort <b>*</b>
+            <textarea name="schlusswort" required placeholder="Gibt es noch etwas, das du dem Team mitteilen möchtest?"></textarea>
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" required />
+            <span>Ich bestätige, dass meine Angaben wahrheitsgemäß sind und dass ich die Serverregeln gelesen habe. <b>*</b></span>
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" required />
+            <span>Ich bin damit einverstanden, dass das Zenkai-DE-Team meine Angaben zur Bearbeitung der Bewerbung verwendet. <b>*</b></span>
+          </label>
+
+          <div class="finish-note">
+            <strong>Hinweis:</strong> In dieser ersten GitHub-Pages-Version wird die Bewerbung als Datei heruntergeladen.
+            Damit Bewerbungen direkt an das Team gesendet werden, kann später ein sicherer Formular-Service eingebunden werden.
+          </div>
+        </div>
+
+        <div class="form-navigation">
+          <button type="button" class="secondary-button" id="prevButton">← Zurück</button>
+          <button type="button" class="primary-button" id="nextButton">Weiter →</button>
+          <button type="submit" class="primary-button" id="submitButton">Bewerbung herunterladen</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>ZENKAI DE</strong><span> · NanosWorld Naruto RP</span></div>
+    <div>© 2026 Zenkai DE · Whitelist-Portal</div>
+  </footer>
+
+  <script>
+    const steps = document.querySelectorAll(".form-step");
+    const labels = document.querySelectorAll(".progress-labels span");
+    const progress = document.getElementById("progress");
+    const previousButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    const submitButton = document.getElementById("submitButton");
+    const form = document.getElementById("applicationForm");
+
+    let currentStep = 0;
+
+    function updateForm() {
+      steps.forEach((step, index) => {
+        step.classList.toggle("active", index === currentStep);
+      });
+
+      labels.forEach((label, index) => {
+        label.classList.toggle("active", index === currentStep);
+      });
+
+      progress.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+
+      previousButton.style.display = currentStep === 0 ? "none" : "block";
+      nextButton.style.display = currentStep === steps.length - 1 ? "none" : "block";
+      submitButton.style.display = currentStep === steps.length - 1 ? "block" : "none";
+    }
+
+    function validateCurrentStep() {
+      const fields = steps[currentStep].querySelectorAll(
+        "input[required], textarea[required], select[required]"
+      );
+
+      for (const field of fields) {
+        if (!field.checkValidity()) {
+          field.reportValidity();
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    nextButton.addEventListener("click", () => {
+      if (validateCurrentStep() && currentStep < steps.length - 1) {
+        currentStep++;
+        updateForm();
+
+        document.getElementById("bewerbung").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+
+    previousButton.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateForm();
+      }
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!validateCurrentStep()) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.erstellt_am = new Date().toLocaleString("de-DE");
+
+      const file = new Blob(
+        [JSON.stringify(data, null, 2)],
+        { type: "application/json" }
+      );
+
+      const link = document.createElement("a");
+      const characterName = (data.char_name || "Charakter")
+        .replaceAll(" ", "-")
+        .replace(/[^a-zA-Z0-9äöüÄÖÜß-]/g, "");
+
+      link.href = URL.createObjectURL(file);
+      link.download = `Zenkai-DE-Bewerbung-${characterName}.json`;
+      link.click();
+
+      alert("Deine Bewerbung wurde erfolgreich als Datei heruntergeladen.");
+    });
+
+    updateForm();
+  </script>
+</body>
+</html>
